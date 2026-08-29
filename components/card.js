@@ -9,6 +9,7 @@ cardTemplate.innerHTML = `
             </div>
             <div class="card-body show-content">
                 <slot name="body">BODY</slot>
+                <slot name="footer"></slot>
             </div>
         </div>
         <svg width="132" height="9" viewBox="0 0 132 9" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -35,3 +36,30 @@ customElements.define('card-component', Card);
 
 var transitionout = false;
 var destination = null;
+const cardwatcher = document.querySelector('card-component').shadowRoot.querySelector(".card-body");
+
+cardwatcher.addEventListener("transitionend", (e) => {
+    if (transitionout && e.propertyName == "height") {
+        // only want this firing once lol
+        transitionout = false;
+
+        document.location.replace(destination);
+    }
+});
+
+window.addEventListener("click", (e) => {
+    // overwrite existing link click
+    if (e.target.matches("a")) {
+        // do the transition out before transitioning
+        e.preventDefault();
+
+        transitionout = true;
+
+        var childs = document.querySelector('card-component').shadowRoot.querySelectorAll(".show-content");
+        childs.forEach((element) => {
+            element.classList.toggle("show-content");
+        });
+
+        destination = e.target.href;
+    }
+});

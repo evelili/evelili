@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width,initial-scale=1.0">
-        <title>Home</title>
+        <title>Blog</title>
 
         <link rel="preload" href="/assets/bg_pattern.svg" as="image">
         <link rel="preload" href="/assets/logo.svg" as="image">
@@ -18,18 +18,23 @@
 
         <link rel="icon" href="/assets/logo_icon.svg">
 
+        <script src="/components/bloglink.js" type="text/javascript" defer></script>
         <script src="/components/card.js" type="text/javascript" defer blocking="render"></script>
     </head>
     <body>
         <main>
             <div class="pagebody">
                 
-                <card-component class="small">
-                    <span slot="title">evelili</span>
-                    <a slot="body" href="/about.html">about</a>
-                    <a slot="body" href="/end-of-elysium.html">end of elysium</a>
-                    <a slot="body" href="/blog.html">blog</a>
-                    <a slot="body" href="/faq.html">faq</a>
+                <card-component class="medium">
+                    <span slot="title">blog</span>
+
+                    <bloglink-component slot="body">
+                        <a slot="title" href="/blog/post-1.html">Welcome to my website&nbsp;›</a>
+                        <p slot="date">2026-08-28</p>
+                        <p slot="summary">What it says on the tin.</p>
+                    </bloglink-component>
+                    
+                    <a slot="footer" href="/index.html">‹ back</a>
                 </card-component>
 
             </div>

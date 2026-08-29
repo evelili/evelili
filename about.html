@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width,initial-scale=1.0">
-        <title>Home</title>
+        <title>About</title>
 
         <link rel="preload" href="/assets/bg_pattern.svg" as="image">
         <link rel="preload" href="/assets/logo.svg" as="image">
@@ -18,6 +18,7 @@
 
         <link rel="icon" href="/assets/logo_icon.svg">
 
+        <script src="/components/paragraph.js" type="text/javascript" defer></script>
         <script src="/components/card.js" type="text/javascript" defer blocking="render"></script>
     </head>
     <body>
@@ -25,11 +26,14 @@
             <div class="pagebody">
                 
                 <card-component class="small">
-                    <span slot="title">evelili</span>
-                    <a slot="body" href="/about.html">about</a>
-                    <a slot="body" href="/end-of-elysium.html">end of elysium</a>
-                    <a slot="body" href="/blog.html">blog</a>
-                    <a slot="body" href="/faq.html">faq</a>
+                    <span slot="title">about</span>
+
+                    <paragraph-component slot="body">
+                        <p slot="para-title"><span class="grad">Lili | she/her</span></p>
+                        <p slot="para-body">Canadian writer, artist, game developer, musician, and/or doer-of-everything.</p>
+                    </paragraph-component>
+                    
+                    <a slot="footer" href="/index.html">‹ back</a>
                 </card-component>
 
             </div>

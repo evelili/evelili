@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title>FAQ</title>
+
+        <link rel="preload" href="/assets/bg_pattern.svg" as="image">
+        <link rel="preload" href="/assets/logo.svg" as="image">
+        <link rel="preload" href="/assets/header_splash.svg" as="image">
+
+        <link rel="preload" href="/style.css" as="style">
+        <link rel="stylesheet" href="/style.css">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@100..900&family=Zen+Loop&display=swap" rel="stylesheet">
+
+        <link rel="icon" href="/assets/logo_icon.svg">
+
+        <script src="/components/paragraph.js" type="text/javascript" defer></script>
+        <script src="/components/card.js" type="text/javascript" defer blocking="render"></script>
+    </head>
+    <body>
+        <main>
+            <div class="pagebody">
+                
+                <card-component class="medium">
+                    <span slot="title">faq</span>
+
+                    <paragraph-component slot="body">
+                        <p slot="para-title"><span class="grad">How do you pronounce "evelili"?</span></p>
+                        <p slot="para-body">EH-vuh-lih-lee</p>
+                        <p slot="para-body">It's a combination of Evelynn (the character) and Lili (my name).</p>
+                    </paragraph-component>
+
+                    <paragraph-component slot="body">
+                        <p slot="para-title"><span class="grad">What's the purpose of this website?</span></p>
+                        <p slot="para-body">I like yapping about the stuff I make. If you're interested in that kind of stuff, who am I to deprive you of it?</p>
+                    </paragraph-component>
+
+                    <paragraph-component slot="body">
+                        <p slot="para-title"><span class="grad">Why did you leave social media?</span></p>
+                        <p slot="para-body">Spite, mostly.</p>
+                    </paragraph-component>
+
+                    <paragraph-component slot="body">
+                        <p slot="para-title"><span class="grad">What are you up to now?</span></p>
+                        <p slot="para-body">Being employed, touching grass, and working on End of Elysium.</p>
+                    </paragraph-component>
+
+                    <paragraph-component slot="body">
+                        <p slot="para-title"><span class="grad">What is End of Elysium?</span></p>
+                        <p slot="para-body">End of Elysium (EoE) is the visual novel adventure game I've been developing since 2022.</p>
+                    </paragraph-component>
+
+                    <paragraph-component slot="body">
+                        <p slot="para-title"><span class="grad">How can I play EoE?</span></p>
+                        <p slot="para-body">Thank you for your interest. You will be able to play the prologue about 1 year before the full release.</p>
+                    </paragraph-component>
+
+                    <paragraph-component slot="body">
+                        <p slot="para-title"><span class="grad">When is EoE coming out?</span></p>
+                        <p slot="para-body">When it's done.</p>
+                    </paragraph-component>
+                    
+                    <a slot="footer" href="/index.html">‹ back</a>
+                </card-component>
+
+            </div>
+        </main>
+    </body>
+</html>

@@ -12,16 +12,32 @@
 
     --size-small: 320px;
     --size-med: 480px;
-    --size-large: 720px;
+    --size-large: 640px;
 }
 
 body {
     margin: 0;
     font-family: 'Roboto Condensed', sans-serif;
-    background-image: url(/assets/bg_pattern.svg);
-    background-repeat: repeat;
+    background-image: url(/assets/header_splash.svg), url(/assets/bg_pattern.svg);
+    background-repeat: no-repeat, repeat;
+    background-position: center top;
     max-height: 100vh;
     overflow-y: hidden;
+    color: var(--col-dark);
+}
+
+.grad {
+    background-image:
+        linear-gradient(var(--col-dark) 25%, var(--col-accent-50)),
+        linear-gradient(var(--col-middark));
+    color: transparent;
+    background-clip: text;
+
+    font-weight: 400;
+}
+
+.emphasis {
+    font-weight: 400;
 }
 
 h1 {
@@ -37,9 +53,74 @@ h1 {
     text-align: center;
 }
 
+h2 {
+    margin: 0;
+    font-weight: 400;
+    width: 100%;
+    font-family: 'Zen Loop', sans-serif;
+    font-size: 32px;
+    background-image: linear-gradient(var(--col-dark), var(--col-mid));
+    color: transparent;
+    background-clip: text;
+}
+
 p {
     margin: 0;
     padding: 0;
+}
+
+a {
+    text-decoration: none;
+    font-family: 'Zen Loop', sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+
+    background-image: linear-gradient(var(--col-dark), var(--col-mid));
+    color: transparent;
+    background-clip: text;
+
+    @media(hover: hover) and (pointer: fine) {
+        &:hover {
+            background-image: linear-gradient(var(--col-dark) 25%, var(--col-accent-50));
+        }
+    }
+
+    &:active {
+        background-image:
+            linear-gradient(var(--col-dark) 25%, var(--col-accent-50)),
+            linear-gradient(#2b2d4200, var(--col-mid));
+        text-decoration: underline;
+        text-decoration-thickness: 1px;
+        text-underline-offset: 4px;
+    }
+}
+
+img {
+    background-color: var(--col-midlight);
+    box-sizing: border-box;
+    max-width: 100%;
+
+    border: 2px solid transparent;
+    background:
+        linear-gradient(var(--col-light), var(--col-light)) padding-box,
+        linear-gradient(#f14f6333, #8d99ae33) border-box;
+    border-radius: 8px;
+    max-height: 100px;
+    object-fit: contain;
+}
+
+ul {
+    margin: 0;
+    padding-left: 32px;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+
+    li {
+        font-weight: 200;
+    }
 }
 
 main {
@@ -149,22 +230,24 @@ card-component {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 16px;
+    gap: 20px;
     transition: height var(--trans-dur) ease-out, opacity var(--trans-dur) ease-out, width var(--trans-dur) ease-out;
     height: 0px;
     overflow-y: clip;
     opacity: 0;
+    width: 100%;
 
-    ::slotted(a) {
-        text-decoration: none;
-        font-family: 'Zen Loop', sans-serif;
-        font-size: 32px;
-        font-weight: 400;
+    slot[name=body]::slotted(a) {
+        font-size: 32px !important;
+    }
 
-        background-image: linear-gradient(var(--col-dark), var(--col-mid));
-        color: transparent;
-        background-clip: text;
-        text-align: center;
+    slot[name=footer]::slotted(a) {
+        padding-top: 12px;
+    }
+
+    ::slotted(paragraph-component), ::slotted(bloglink-component), ::slotted(blogheader-component) {
+        transition: none;
+        opacity: 0;
     }
 
     &.show-content {
@@ -176,22 +259,80 @@ card-component {
             height: 0px;
             opacity: 0;
         }
+
+        ::slotted(paragraph-component), ::slotted(bloglink-component), ::slotted(blogheader-component) {
+            transition: opacity var(--trans-dur) ease-out;
+            transition-delay: calc(var(--trans-dur) * 2);
+            opacity: 1;
+            @starting-style {
+                opacity: 0;
+            }
+        }
     }
 }
 
-a {
-    @media(hover: hover) and (pointer: fine) {
-        &:hover {
-            background-image: linear-gradient(var(--col-dark) 25%, var(--col-accent-50));
+paragraph-component, bloglink-component, blogheader-component {
+    width: 100%;
+}
+
+.para {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: flex-start;
+    justify-content: flex-start;
+
+    /* slot[name=para-title] {
+        font-weight: 400;
+    } */
+
+    .para-body {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        font-weight: 200;
+        width: 100%;
+    }
+}
+
+.bloglink {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: auto;
+
+    .bloglink-head {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+
+        ::slotted(a) {
+            font-size: 32px !important;
+        }
+
+        slot[name=date] {
+            color: var(--col-middark);
+            font-size: 14px;
+            font-weight: 200;
         }
     }
 
-    &:active {
-        background-image:
-            linear-gradient(var(--col-dark) 25%, var(--col-accent-50)),
-            linear-gradient(#2b2d4200, var(--col-mid));
-        text-decoration: underline;
-        text-decoration-thickness: 1px;
-        text-underline-offset: 4px;
+    slot[name=summary] {
+        font-weight: 200;
+    }
+
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--col-midlight);
+}
+
+.blogheader {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    slot[name=date] {
+        color: var(--col-middark);
+        font-size: 14px;
+        font-weight: 200;
     }
 }
