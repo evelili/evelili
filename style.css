@@ -1,0 +1,197 @@
+:root, :host {
+    --trans-dur: 0.15s;
+
+    --col-light: #FDFBFB;
+    --col-midlight: #DDDEEB;
+    --col-mid: #8D99AE;
+    --col-middark: #94949F;
+    --col-dark: #2B2D42;
+    --col-accent: #F14F63;
+
+    --col-accent-50: #F14F6380;
+
+    --size-small: 320px;
+    --size-med: 480px;
+    --size-large: 720px;
+}
+
+body {
+    margin: 0;
+    font-family: 'Roboto Condensed', sans-serif;
+    background-image: url(/assets/bg_pattern.svg);
+    background-repeat: repeat;
+    max-height: 100vh;
+    overflow-y: hidden;
+}
+
+h1 {
+    margin: 0;
+    font-size: 48px;
+    letter-spacing: 0.33em;
+    margin-right: -0.33em;
+    font-family: 'Zen Loop', sans-serif;
+    font-weight: 400;
+    background-image: linear-gradient(var(--col-dark) 25%, var(--col-accent-50));
+    color: transparent;
+    background-clip: text;
+    text-align: center;
+}
+
+p {
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    box-sizing: border-box;
+    height: 100vh;
+    overflow-y: scroll;
+}
+
+.pagebody {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    min-height: 100vh;
+}
+
+card-component {
+    align-content: center;
+    justify-items: center;
+    min-width: min(100%, var(--size-small));
+    width: auto;
+
+    &.small::part(card) {
+        max-width: var(--size-small);
+    }
+
+    &.medium::part(card) {
+        max-width: var(--size-med);
+    }
+
+    &.large::part(card) {
+        max-width: var(--size-large);
+    }
+}
+
+.pagecard {
+    background-color: var(--col-light);
+    border-radius: 16px;
+    padding: 16px;
+    box-shadow: 0px 2px 16px 0px #8D99Ae33, 0px 2px 4px 0px #14152240;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    flex-grow: 1;
+
+    box-sizing: border-box;
+
+    min-width: min(100%, var(--size-small));
+    width: min(100%, var(--size-small));
+
+    transition: width var(--trans-dur) ease-out;
+
+    &.show-content {
+        transition-delay: var(--trans-dur);
+        width: calc-size(auto, size);
+        @starting-style {
+            width: min(100%, var(--size-small));
+        }
+    }
+}
+
+.card-wrapper {
+    border-radius: 12px;
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+    flex-grow: 1;
+
+    box-sizing: border-box;
+    width: 100%;
+
+    border: 1px solid transparent;
+    background:
+        linear-gradient(var(--col-light), var(--col-light)) padding-box,
+        linear-gradient(#f14f6333, #8d99ae33) border-box;
+}
+
+.card-title {
+    height: 64px;
+    background-image: url(/assets/logo.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    align-content: center;
+
+    h1 {
+        opacity: 0;
+        transition: opacity var(--trans-dur) ease-out;
+    }
+
+    &.show-content {
+        h1 {
+            transition-delay: var(--trans-dur);
+            opacity: 1;
+            @starting-style {
+                opacity: 0;
+            }
+        }
+    }
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    transition: height var(--trans-dur) ease-out, opacity var(--trans-dur) ease-out, width var(--trans-dur) ease-out;
+    height: 0px;
+    overflow-y: clip;
+    opacity: 0;
+
+    ::slotted(a) {
+        text-decoration: none;
+        font-family: 'Zen Loop', sans-serif;
+        font-size: 32px;
+        font-weight: 400;
+
+        background-image: linear-gradient(var(--col-dark), var(--col-mid));
+        color: transparent;
+        background-clip: text;
+        text-align: center;
+    }
+
+    &.show-content {
+        transition-delay: var(--trans-dur);
+        height: calc-size(fit-content, size);
+        opacity: 1;
+
+        @starting-style {
+            height: 0px;
+            opacity: 0;
+        }
+    }
+}
+
+a {
+    @media(hover: hover) and (pointer: fine) {
+        &:hover {
+            background-image: linear-gradient(var(--col-dark) 25%, var(--col-accent-50));
+        }
+    }
+
+    &:active {
+        background-image:
+            linear-gradient(var(--col-dark) 25%, var(--col-accent-50)),
+            linear-gradient(#2b2d4200, var(--col-mid));
+        text-decoration: underline;
+        text-decoration-thickness: 1px;
+        text-underline-offset: 4px;
+    }
+}

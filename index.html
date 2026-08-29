@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title>Home</title>
+
+        <link rel="preload" href="/assets/bg_pattern.svg" as="image">
+        <link rel="preload" href="/assets/logo.svg" as="image">
+
+        <link rel="preload" href="/style.css" as="style">
+        <link rel="stylesheet" href="/style.css">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@100..900&family=Zen+Loop&display=swap" rel="stylesheet">
+
+        <link rel="icon" href="/assets/logo_icon.svg">
+
+        <script src="/components/card.js" type="text/javascript" defer blocking="render"></script>
+    </head>
+    <body>
+        <main>
+            <div class="pagebody">
+                
+                <card-component class="small">
+                    <span slot="title">evelili</span>
+                    <a slot="body" href="#">about</a>
+                    <a slot="body" href="#">end of elysium</a>
+                    <a slot="body" href="#">blog</a>
+                    <a slot="body" href="#">faq</a>
+                </card-component>
+
+            </div>
+        </main>
+    </body>
+</html>
