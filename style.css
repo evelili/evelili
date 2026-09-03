@@ -143,7 +143,7 @@ card-component {
     align-content: center;
     justify-items: center;
     min-width: min(100%, var(--size-small));
-    width: auto;
+    width: 100%;
 
     &.small::part(card) {
         max-width: var(--size-small);
@@ -178,7 +178,7 @@ card-component {
 
     &.show-content {
         transition-delay: var(--trans-dur);
-        width: calc-size(auto, size);
+        width: 100%;
         @starting-style {
             width: min(100%, var(--size-small));
         }
@@ -209,6 +209,7 @@ card-component {
     background-repeat: no-repeat;
     background-position: center;
     align-content: center;
+    width: 100%;
 
     h1 {
         opacity: 0;
@@ -226,14 +227,29 @@ card-component {
     }
 }
 
+.trans-wrap {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows var(--trans-dur) ease-out;
+    width: 100%;
+
+    &.show-content {
+        transition-delay: var(--trans-dur);
+        grid-template-rows: 1fr;
+
+        @starting-style {
+            grid-template-rows: 0fr;
+        }
+    }
+}
+
 .card-body {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 20px;
     transition: height var(--trans-dur) ease-out, opacity var(--trans-dur) ease-out, width var(--trans-dur) ease-out;
-    height: 0px;
-    overflow-y: clip;
+    overflow: hidden;
     opacity: 0;
     width: 100%;
 
@@ -252,11 +268,9 @@ card-component {
 
     &.show-content {
         transition-delay: var(--trans-dur);
-        height: calc-size(fit-content, size);
         opacity: 1;
 
         @starting-style {
-            height: 0px;
             opacity: 0;
         }
 

@@ -7,9 +7,11 @@ cardTemplate.innerHTML = `
             <div class="card-title show-content">
                 <h1><slot name="title">title</slot></h1>
             </div>
-            <div class="card-body show-content">
-                <slot name="body">BODY</slot>
-                <slot name="footer"></slot>
+            <div class="trans-wrap show-content">
+                <div class="card-body show-content">
+                    <slot name="body">BODY</slot>
+                    <slot name="footer"></slot>
+                </div>
             </div>
         </div>
         <svg width="132" height="9" viewBox="0 0 132 9" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -36,10 +38,10 @@ customElements.define('card-component', Card);
 
 var transitionout = false;
 var destination = null;
-const cardwatcher = document.querySelector('card-component').shadowRoot.querySelector(".card-body");
+const cardwatcher = document.querySelector('card-component').shadowRoot.querySelector(".trans-wrap");
 
 cardwatcher.addEventListener("transitionend", (e) => {
-    if (transitionout && e.propertyName == "height") {
+    if (transitionout && e.propertyName == "grid-template-rows") {
         // only want this firing once lol
         transitionout = false;
 
