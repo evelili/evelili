@@ -1,5 +1,5 @@
 :root, :host {
-    --trans-dur: 0.15s;
+    --trans-dur: 0.13s;
 
     --col-light: #FDFBFB;
     --col-midlight: #DDDEEB;
@@ -10,7 +10,7 @@
 
     --col-accent-50: #F14F6380;
 
-    --size-small: 320px;
+    --size-small: 300px;
     --size-med: 480px;
     --size-large: 640px;
 }
@@ -18,12 +18,19 @@
 body {
     margin: 0;
     font-family: 'Roboto Condensed', sans-serif;
-    background-image: url(/assets/header_splash.svg), url(/assets/bg_pattern.svg);
-    background-repeat: no-repeat, repeat;
+    /* background-image: url(/assets/header_splash.svg), url(/assets/bg_pattern.svg); */
+    background-image: url(/assets/bg_pattern.svg);
+    /* background-repeat: no-repeat, repeat; */
     background-position: center top;
     max-height: 100vh;
     overflow-y: hidden;
     color: var(--col-dark);
+}
+
+.splash {
+    position: fixed;
+    z-index: -1;
+    justify-self: center;
 }
 
 .grad {
@@ -251,7 +258,7 @@ card-component {
     transition: height var(--trans-dur) ease-out, opacity var(--trans-dur) ease-out, width var(--trans-dur) ease-out;
     overflow: hidden;
     opacity: 0;
-    width: 100%;
+    /* width: 100%; */
 
     slot[name=body]::slotted(a) {
         font-size: 32px !important;

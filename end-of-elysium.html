@@ -5,6 +5,275 @@
         <meta name="viewport" content="width=device-width,initial-scale=1.0">
         <title>End of Elysium</title>
 
+        <link rel="preload" href="/eoe/eoe-style.css" as="style">
+        <link rel="stylesheet" href="/eoe/eoe-style.css">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Economica:wght@700&family=Roboto+Condensed:wght@100..900&display=swap" rel="stylesheet">
+
+        <link rel="icon" href="/eoe/mark.svg">
+
+        <script src="/eoe/characard.js" type="text/javascript" defer></script>
+    </head>
+    <body>
+        <main class="loading">
+            <!-- <div class="fader"></div> -->
+            <div class="scribble"></div>
+            <div class="pagebody">
+
+                <div class="landing">
+                    <div class="landing-title">
+                        <img src="/eoe/eoe_logo.png" alt="End of Elysium">
+                    </div>
+                </div>
+
+                <div class="section">
+                    <div class="section-head">
+                        <h1>ABOUT</h1>
+                        <div class="head-underline"></div>
+                    </div>
+                    <div class="section-body">
+                        <p><span class="emph">End of Elysium (EoE)</span> is a visual novel adventure game being developed by evelili.</p>
+                        <p>The game follows Lilith, a woman who has no business being a bartender, and her conversations with the patrons of Elysium. However, each patron has their own unsavoury reasons for coming to her establishment.</p>
+                        <p>If Lilith wants to fully uncover their stories, she must use logic to connect conversations and find the hidden truth of her patrons' lives.</p>
+                    </div>
+                    <a class="cta" href="https://store.steampowered.com/app/3849070/" target="_blank"><span>Wishlist on Steam</span></a>
+                    <a class="cta" href="https://evelili.itch.io/end-of-elysium-demo" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#ffffff"><path d="M360-624h240v-96q0-50-35-85t-85-35q-50 0-85 35t-35 85v96Zm176 519.77q-56-56.22-56-136Q480-320 536.23-376q56.22-56 136-56Q752-432 808-375.77q56 56.22 56 136Q864-160 807.77-104q-56.22 56-136 56Q592-48 536-104.23ZM727-151l34-34-65-65v-86h-48v106l79 79ZM451-96H264q-29.7 0-50.85-21.15Q192-138.3 192-168v-384q0-29.7 21.15-50.85Q234.3-624 264-624h24v-96q0-79.68 56.23-135.84 56.22-56.16 136-56.16Q560-912 616-855.84q56 56.16 56 135.84v96h24q29.7 0 50.85 21.15Q768-581.7 768-552v67q-23-10-47-14.5t-49-4.5q-110.31 0-187.16 76.84Q408-350.31 408-240q0 38.49 12 74.75Q432-129 451-96Z"/></svg><span>Play the demo</span></a>
+                    <img src="/eoe/drinks.png" alt="" class="img-small">
+                </div>
+
+                <div class="section">
+                    <div class="section-head">
+                        <h1>CHARACTERS</h1>
+                        <div class="head-underline"></div>
+                    </div>
+
+                    <div class="carousel-wrapper-3d">
+                        <div class="carousel-3d">
+
+                            <characard-component class="a">
+                                <img slot="image" src="/eoe/charas/lilith.png">
+                                <span slot="title">LILITH</span>
+                                <span slot="summary">An employee of Elysium. Terrible at conversation, and an even worse bartender.</span>
+                            </characard-component>
+
+                            <characard-component class="b">
+                                <img slot="image" src="/eoe/drinks.png">
+                                <span slot="title">ASMODEUS DEVA</span>
+                                <span slot="summary">An employee of Elysium. Pretends to be grumpier than he really is.</span>
+                            </characard-component>
+
+                            <characard-component class="c">
+                                <img slot="image" src="/eoe/drinks.png">
+                                <span slot="title">VESPER ASPHODEL</span>
+                                <span slot="summary">Elysium's bar manager by necessity, not choice. Never on time for work.</span>
+                            </characard-component>
+
+                            <characard-component class="d">
+                                <img slot="image" src="/eoe/charas/rosario.png">
+                                <span slot="title">ROSARIO ROJAS</span>
+                                <span slot="summary">A biker who speaks with actions instead of words. Prefers to keep the helmet on.</span>
+                            </characard-component>
+
+                            <characard-component class="e">
+                                <img slot="image" src="/eoe/charas/tiberius.png">
+                                <span slot="title">TIBERIUS GREY</span>
+                                <span slot="summary">A wisecracker with a resigned personality. Perpetually on the verge of sleep.</span>
+                            </characard-component>
+
+                            <characard-component class="f">
+                                <img slot="image" src="/eoe/charas/jericho.png">
+                                <span slot="title">JERICHO MOON</span>
+                                <span slot="summary">A charismatic man with an eye for detail. Never forgets to wear his smile.</span>
+                            </characard-component>
+
+                            <characard-component class="g">
+                                <img slot="image" src="/eoe/charas/cynthia.png">
+                                <span slot="title">CYNTHIA BELMONTE</span>
+                                <span slot="summary">A reserved young lady who blends into the background. Dislikes eye contact.</span>
+                            </characard-component>
+
+                            <characard-component class="h">
+                                <img slot="image" src="/eoe/charas/rameses.png">
+                                <span slot="title">RAMESES LAURENT</span>
+                                <span slot="summary">A famous actor at the height of his career. Never gets tired of saying his own name.</span>
+                            </characard-component>
+
+                            <characard-component class="i">
+                                <img slot="image" src="/eoe/charas/kirari.png">
+                                <span slot="title">KIRARI AMAMI</span>
+                                <span slot="summary">An enigmatic woman at the whims of her own curiosity. Prone to staring.</span>
+                            </characard-component>
+
+                            <characard-component class="j">
+                                <img slot="image" src="/eoe/charas/isadora.png">
+                                <span slot="title">ISADORA HAWTHORNE</span>
+                                <span slot="summary">A showwoman with a silver tongue. Took the phrase "rose-coloured glasses" literally.</span>
+                            </characard-component>
+
+                            <characard-component class="k">
+                                <img slot="image" src="/eoe/charas/valentine.png">
+                                <span slot="title">VALENTINE ZHURONG</span>
+                                <span slot="summary">A restless, reckless woman quick to panic. Wears her heart on her sleeve.</span>
+                            </characard-component>
+
+                            <characard-component class="l">
+                                <img slot="image" src="/eoe/charas/nazareth.png">
+                                <span slot="title">NAZARETH ALDERAMIN</span>
+                                <span slot="summary">A stylish man with an aloof attitude. Very particular about appearances.</span>
+                            </characard-component>
+
+                            <characard-component class="m">
+                                <img slot="image" src="/eoe/charas/damian.png">
+                                <span slot="title">DAMIAN QUINN</span>
+                                <span slot="summary">A smug man who never hears "no". Loves flaunting his tattoos and his knife, in either order.</span>
+                            </characard-component>
+
+                            <characard-component class="n">
+                                <img slot="image" src="/eoe/charas/emery.png">
+                                <span slot="title">EMERY IRIS</span>
+                                <span slot="summary">An antisocial grifter. Has no qualms about lying through their pointed teeth.</span>
+                            </characard-component>
+
+                            <characard-component class="o">
+                                <img slot="image" src="/eoe/charas/magnolia.png">
+                                <span slot="title">MAGNOLIA BELMONTE</span>
+                                <span slot="summary">A calculating businesswoman and mother. Difficult at her best; impossible at her worst.</span>
+                            </characard-component>
+
+                        </div>
+
+                        <div class="carousel-controls">
+                            <button class="arrow-button left-arrow"><svg width="20" height="20" viewBox="1 1 19 25" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 13.3137L12.3137 2L15.1421 4.82843L6.65685 13.3137L15.1421 21.799L12.3137 24.6274L1 13.3137Z" fill="white"/><path d="M15.1421 10.4853L12.3137 13.3137L15.1421 16.1421L17.9706 13.3137L15.1421 10.4853Z" fill="white"/></svg></button>
+                            <button class="arrow-button right-arrow"><svg width="20" height="20" viewBox="-1 1 19 25" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M17.9706 13.3137L6.65685 24.6274L3.82843 21.799L12.3137 13.3137L3.82843 4.82843L6.65685 2L17.9706 13.3137Z" fill="white"/><path d="M3.82843 16.1421L6.65685 13.3137L3.82843 10.4853L1 13.3137L3.82843 16.1421Z" fill="white"/></svg></button>
+
+                            <!-- <button class="arrow-button left-arrow"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#ffffff"><path d="M560-240 320-480l240-240 56 56-184 184 184 184-56 56Z"/></svg></button>
+                            <button class="arrow-button right-arrow"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#ffffff"><path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z"/></svg></button> -->
+                        </div>
+                        
+                    </div>
+
+                    <div class="carousel-buttons">
+
+                        <label class="c-button" for="c-button-1">
+                            <input type="radio" name="carousel" id="c-button-1" value="0" checked />
+                            <img slot="image" src="/eoe/chibis/chibi_lil.png">
+                        </label>
+
+                        <label class="c-button" for="c-button-2">
+                            <input type="radio" name="carousel" id="c-button-2" value="1" />
+                            <img slot="image" src="/eoe/chibis/chibi_lil.png">
+                        </label>
+
+                        <label class="c-button" for="c-button-3">
+                            <input type="radio" name="carousel" id="c-button-3" value="2" />
+                            <img slot="image" src="/eoe/chibis/chibi_lil.png">
+                        </label>
+
+                        <label class="c-button" for="c-button-4">
+                            <input type="radio" name="carousel" id="c-button-4" value="3" />
+                            <img slot="image" src="/eoe/chibis/chibi_ros.png">
+                        </label>
+
+                        <label class="c-button" for="c-button-5">
+                            <input type="radio" name="carousel" id="c-button-5" value="4" />
+                            <img slot="image" src="/eoe/chibis/chibi_tib.png">
+                        </label>
+
+                        <label class="c-button" for="c-button-6">
+                            <input type="radio" name="carousel" id="c-button-6" value="5" />
+                            <img slot="image" src="/eoe/chibis/chibi_jer.png">
+                        </label>
+
+                        <label class="c-button" for="c-button-7">
+                            <input type="radio" name="carousel" id="c-button-7" value="6" />
+                            <img slot="image" src="/eoe/chibis/chibi_cyn.png">
+                        </label>
+
+                        <label class="c-button" for="c-button-8">
+                            <input type="radio" name="carousel" id="c-button-8" value="7" />
+                            <img slot="image" src="/eoe/chibis/chibi_ram.png">
+                        </label>
+
+                        <label class="c-button" for="c-button-9">
+                            <input type="radio" name="carousel" id="c-button-9" value="8" />
+                            <img slot="image" src="/eoe/chibis/chibi_kir.png">
+                        </label>
+
+                        <label class="c-button" for="c-button-10">
+                            <input type="radio" name="carousel" id="c-button-10" value="9" />
+                            <img slot="image" src="/eoe/chibis/chibi_isa.png">
+                        </label>
+
+                        <label class="c-button" for="c-button-11">
+                            <input type="radio" name="carousel" id="c-button-11" value="10" />
+                            <img slot="image" src="/eoe/chibis/chibi_val.png">
+                        </label>
+
+                        <label class="c-button" for="c-button-12">
+                            <input type="radio" name="carousel" id="c-button-12" value="11" />
+                            <img slot="image" src="/eoe/chibis/chibi_naz.png">
+                        </label>
+
+                        <label class="c-button" for="c-button-13">
+                            <input type="radio" name="carousel" id="c-button-13" value="12" />
+                            <img slot="image" src="/eoe/chibis/chibi_dam.png">
+                        </label>
+
+                        <label class="c-button" for="c-button-14">
+                            <input type="radio" name="carousel" id="c-button-14" value="13" />
+                            <img slot="image" src="/eoe/chibis/chibi_em.png">
+                        </label>
+
+                        <label class="c-button" for="c-button-15">
+                            <input type="radio" name="carousel" id="c-button-15" value="14" />
+                            <img slot="image" src="/eoe/chibis/chibi_mag.png">
+                        </label>
+
+                    </div>
+
+                </div>
+
+                <div class="section">
+                    <div class="section-head">
+                        <h1>GALLERY</h1>
+                        <div class="head-underline"></div>
+                    </div>
+                </div>
+
+                <img src="/eoe/drinks.png">
+                <img src="/eoe/drinks.png">
+                <img src="/eoe/drinks.png">
+                <img src="/eoe/drinks.png">
+                <img src="/eoe/drinks.png">
+
+            </div>
+        </main>
+
+        <footer class="loading">
+            <p>Copyright © 2026 evelili</p>
+            <a href="/index.html" target="_blank">main site</a>
+        </footer>
+
+        <script src="/eoe/eoe-main.js" type="text/javascript" defer></script>
+    </body>
+</html>
+
+
+
+
+
+
+<!-- PLACEHOLDER ==================================================================================================== -->
+
+<!-- <!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title>End of Elysium</title>
+
         <link rel="preload" href="/assets/bg_pattern.svg" as="image">
         <link rel="preload" href="/assets/logo.svg" as="image">
         <link rel="preload" href="/assets/header_splash.svg" as="image">
@@ -38,4 +307,4 @@
             </div>
         </main>
     </body>
-</html>
+</html> -->
