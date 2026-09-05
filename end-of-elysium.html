@@ -10,7 +10,7 @@
 
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Economica:wght@700&family=Roboto+Condensed:wght@100..900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Economica:wght@400;700&family=Roboto+Condensed:wght@100..900&display=swap" rel="stylesheet">
 
         <link rel="icon" href="/eoe/mark.svg">
 
@@ -18,8 +18,20 @@
     </head>
     <body>
         <main class="loading">
-            <!-- <div class="fader"></div> -->
+            <div class="page-shadow"></div>
             <div class="scribble"></div>
+            <div class="key-halo-wrapper">
+                <img class="key-halo" src="/eoe/halo.png">
+            </div>
+            <img class="key-art" src="/eoe/key_art.png">
+            <!-- <img class="halo h-left h-4" src="/eoe/halo.png">
+            <img class="halo h-right h-4" src="/eoe/halo.png">
+            <img class="halo h-left h-3" src="/eoe/halo.png">
+            <img class="halo h-right h-3" src="/eoe/halo.png">
+            <img class="halo h-left h-2" src="/eoe/halo.png">
+            <img class="halo h-right h-2" src="/eoe/halo.png"> -->
+            <img class="halo h-left h-1" src="/eoe/halo.png">
+            <img class="halo h-right h-1" src="/eoe/halo.png">
             <div class="pagebody">
 
                 <div class="landing">
@@ -33,14 +45,39 @@
                         <h1>ABOUT</h1>
                         <div class="head-underline"></div>
                     </div>
-                    <div class="section-body">
-                        <p><span class="emph">End of Elysium (EoE)</span> is a visual novel adventure game being developed by evelili.</p>
-                        <p>The game follows Lilith, a woman who has no business being a bartender, and her conversations with the patrons of Elysium. However, each patron has their own unsavoury reasons for coming to her establishment.</p>
-                        <p>If Lilith wants to fully uncover their stories, she must use logic to connect conversations and find the hidden truth of her patrons' lives.</p>
+                    <div class="border-wrapper">
+                        <div class="about-head">
+                            <h2>What is End of Elysium?</h2>
+                        </div>
+                        <div class="section-body">
+                            <div class="section-text">
+                                <p><span class="emph">End of Elysium (EoE)</span> is a visual novel adventure game being developed by evelili. The game follows Lilith, a woman who has no business being a bartender, and her conversations with the patrons of Elysium.</p>
+                                <p>However, each patron has their own unsavoury reasons for coming to her establishment. If Lilith wants to fully uncover their stories, she must use her logic to uncover the hidden truth about her patrons' lives.</p>
+                            </div>
+                            <img src="/eoe/drinks.png" alt="" class="img-small">
+                        </div>
+
+                        <div class="divider"></div>
+
+                        <div class="section-buttons">
+                            <a class="cta" href="https://store.steampowered.com/app/3849070/" target="_blank">
+                                <span>Wishlist on Steam</span>
+                                <div class="dashes"></div>
+                                <svg xmlns="http://www.w3.org/2000/svg" height="21px" viewBox="0 -960 960 960" width="24px" fill="#ffffff"><path d="M360-624h240v-96q0-50-35-85t-85-35q-50 0-85 35t-35 85v96Zm176 519.77q-56-56.22-56-136Q480-320 536.23-376q56.22-56 136-56Q752-432 808-375.77q56 56.22 56 136Q864-160 807.77-104q-56.22 56-136 56Q592-48 536-104.23ZM727-151l34-34-65-65v-86h-48v106l79 79ZM451-96H264q-29.7 0-50.85-21.15Q192-138.3 192-168v-384q0-29.7 21.15-50.85Q234.3-624 264-624h24v-96q0-79.68 56.23-135.84 56.22-56.16 136-56.16Q560-912 616-855.84q56 56.16 56 135.84v96h24q29.7 0 50.85 21.15Q768-581.7 768-552v67q-23-10-47-14.5t-49-4.5q-110.31 0-187.16 76.84Q408-350.31 408-240q0 38.49 12 74.75Q432-129 451-96Z"/></svg>
+
+                                <!-- <svg class="mark-off" width="24" height="21" viewBox="0 0 24 21" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M11.76 3.68042C15.3373 3.68038 18.2368 6.54634 18.2366 10.0818C18.2361 13.617 15.3362 16.4837 11.759 16.4841C8.18179 16.4844 5.28153 13.6181 5.28149 10.0828C5.28175 6.54719 8.18259 3.68067 11.76 3.68042ZM11.7581 5.28101C9.07537 5.28141 6.89998 7.43047 6.89966 10.0818C6.89955 12.7334 9.07506 14.8836 11.7581 14.8835C14.441 14.8834 16.6161 12.7332 16.6165 10.0818C16.6163 7.43032 14.441 5.2809 11.7581 5.28101Z" fill="white"/></svg>
+                                <svg class="mark-on" width="24" height="21" viewBox="0 0 24 21" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M17.0559 6.39819C17.7991 7.44003 18.2367 8.71013 18.2366 10.0818C18.2361 13.617 15.3362 16.4837 11.759 16.4841C10.2377 16.4842 8.83995 15.9642 7.73462 15.0964L1.14282 18.6433L5.91626 12.8503C5.50934 12.0128 5.2815 11.074 5.28149 10.0828C5.28175 6.54719 8.18259 3.68067 11.76 3.68042C13.4356 3.6804 14.9626 4.30877 16.1125 5.34058L21.9221 1.41187L17.0559 6.39819ZM9.49243 14.1521L9.32935 14.239C10.0441 14.6478 10.873 14.8836 11.7581 14.8835C14.441 14.8834 16.6161 12.7332 16.6165 10.0818C16.6164 9.16463 16.3561 8.30773 15.9045 7.57886L9.49243 14.1521ZM11.7581 5.28101C9.07537 5.28141 6.89998 7.43047 6.89966 10.0818C6.89964 10.553 6.9699 11.008 7.0979 11.4382L14.7239 6.28003C13.9033 5.65401 12.8748 5.28096 11.7581 5.28101Z" fill="white"/></svg> -->
+                            </a>
+                            <a class="cta" href="https://evelili.itch.io/end-of-elysium-demo" target="_blank">
+                                <span>Play the demo</span>
+                                <div class="dashes"></div>
+                                <svg xmlns="http://www.w3.org/2000/svg" height="21px" viewBox="0 -960 960 960" width="24px" fill="#ffffff"><path d="M360-624h240v-96q0-50-35-85t-85-35q-50 0-85 35t-35 85v96Zm176 519.77q-56-56.22-56-136Q480-320 536.23-376q56.22-56 136-56Q752-432 808-375.77q56 56.22 56 136Q864-160 807.77-104q-56.22 56-136 56Q592-48 536-104.23ZM727-151l34-34-65-65v-86h-48v106l79 79ZM451-96H264q-29.7 0-50.85-21.15Q192-138.3 192-168v-384q0-29.7 21.15-50.85Q234.3-624 264-624h24v-96q0-79.68 56.23-135.84 56.22-56.16 136-56.16Q560-912 616-855.84q56 56.16 56 135.84v96h24q29.7 0 50.85 21.15Q768-581.7 768-552v67q-23-10-47-14.5t-49-4.5q-110.31 0-187.16 76.84Q408-350.31 408-240q0 38.49 12 74.75Q432-129 451-96Z"/></svg>
+                                
+                                <!-- <svg class="mark-off" width="24" height="21" viewBox="0 0 24 21" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M11.76 3.68042C15.3373 3.68038 18.2368 6.54634 18.2366 10.0818C18.2361 13.617 15.3362 16.4837 11.759 16.4841C8.18179 16.4844 5.28153 13.6181 5.28149 10.0828C5.28175 6.54719 8.18259 3.68067 11.76 3.68042ZM11.7581 5.28101C9.07537 5.28141 6.89998 7.43047 6.89966 10.0818C6.89955 12.7334 9.07506 14.8836 11.7581 14.8835C14.441 14.8834 16.6161 12.7332 16.6165 10.0818C16.6163 7.43032 14.441 5.2809 11.7581 5.28101Z" fill="white"/></svg>
+                                <svg class="mark-on" width="24" height="21" viewBox="0 0 24 21" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M17.0559 6.39819C17.7991 7.44003 18.2367 8.71013 18.2366 10.0818C18.2361 13.617 15.3362 16.4837 11.759 16.4841C10.2377 16.4842 8.83995 15.9642 7.73462 15.0964L1.14282 18.6433L5.91626 12.8503C5.50934 12.0128 5.2815 11.074 5.28149 10.0828C5.28175 6.54719 8.18259 3.68067 11.76 3.68042C13.4356 3.6804 14.9626 4.30877 16.1125 5.34058L21.9221 1.41187L17.0559 6.39819ZM9.49243 14.1521L9.32935 14.239C10.0441 14.6478 10.873 14.8836 11.7581 14.8835C14.441 14.8834 16.6161 12.7332 16.6165 10.0818C16.6164 9.16463 16.3561 8.30773 15.9045 7.57886L9.49243 14.1521ZM11.7581 5.28101C9.07537 5.28141 6.89998 7.43047 6.89966 10.0818C6.89964 10.553 6.9699 11.008 7.0979 11.4382L14.7239 6.28003C13.9033 5.65401 12.8748 5.28096 11.7581 5.28101Z" fill="white"/></svg> -->
+                            </a>
+                        </div>
                     </div>
-                    <a class="cta" href="https://store.steampowered.com/app/3849070/" target="_blank"><span>Wishlist on Steam</span></a>
-                    <a class="cta" href="https://evelili.itch.io/end-of-elysium-demo" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#ffffff"><path d="M360-624h240v-96q0-50-35-85t-85-35q-50 0-85 35t-35 85v96Zm176 519.77q-56-56.22-56-136Q480-320 536.23-376q56.22-56 136-56Q752-432 808-375.77q56 56.22 56 136Q864-160 807.77-104q-56.22 56-136 56Q592-48 536-104.23ZM727-151l34-34-65-65v-86h-48v106l79 79ZM451-96H264q-29.7 0-50.85-21.15Q192-138.3 192-168v-384q0-29.7 21.15-50.85Q234.3-624 264-624h24v-96q0-79.68 56.23-135.84 56.22-56.16 136-56.16Q560-912 616-855.84q56 56.16 56 135.84v96h24q29.7 0 50.85 21.15Q768-581.7 768-552v67q-23-10-47-14.5t-49-4.5q-110.31 0-187.16 76.84Q408-350.31 408-240q0 38.49 12 74.75Q432-129 451-96Z"/></svg><span>Play the demo</span></a>
-                    <img src="/eoe/drinks.png" alt="" class="img-small">
                 </div>
 
                 <div class="section">
@@ -59,13 +96,13 @@
                             </characard-component>
 
                             <characard-component class="b">
-                                <img slot="image" src="/eoe/drinks.png">
+                                <img slot="image" src="/eoe/charas/asmodeus.png">
                                 <span slot="title">ASMODEUS DEVA</span>
                                 <span slot="summary">An employee of Elysium. Pretends to be grumpier than he really is.</span>
                             </characard-component>
 
                             <characard-component class="c">
-                                <img slot="image" src="/eoe/drinks.png">
+                                <img slot="image" src="/eoe/charas/vesper.png">
                                 <span slot="title">VESPER ASPHODEL</span>
                                 <span slot="summary">Elysium's bar manager by necessity, not choice. Never on time for work.</span>
                             </characard-component>
@@ -159,76 +196,91 @@
                         <label class="c-button" for="c-button-1">
                             <input type="radio" name="carousel" id="c-button-1" value="0" checked />
                             <img slot="image" src="/eoe/chibis/chibi_lil.png">
+                            <img class="c-button-shadow" slot="image" src="/eoe/chibis/chibi_lil_s.png">
                         </label>
 
                         <label class="c-button" for="c-button-2">
                             <input type="radio" name="carousel" id="c-button-2" value="1" />
-                            <img slot="image" src="/eoe/chibis/chibi_lil.png">
+                            <img slot="image" src="/eoe/chibis/chibi_asmo.png">
+                            <img class="c-button-shadow" slot="image" src="/eoe/chibis/chibi_asmo_s.png">
                         </label>
 
                         <label class="c-button" for="c-button-3">
                             <input type="radio" name="carousel" id="c-button-3" value="2" />
-                            <img slot="image" src="/eoe/chibis/chibi_lil.png">
+                            <img slot="image" src="/eoe/chibis/chibi_vesp.png">
+                            <img class="c-button-shadow" slot="image" src="/eoe/chibis/chibi_vesp_s.png">
                         </label>
 
                         <label class="c-button" for="c-button-4">
                             <input type="radio" name="carousel" id="c-button-4" value="3" />
                             <img slot="image" src="/eoe/chibis/chibi_ros.png">
+                            <img class="c-button-shadow" slot="image" src="/eoe/chibis/chibi_ros_s.png">
                         </label>
 
                         <label class="c-button" for="c-button-5">
                             <input type="radio" name="carousel" id="c-button-5" value="4" />
                             <img slot="image" src="/eoe/chibis/chibi_tib.png">
+                            <img class="c-button-shadow" slot="image" src="/eoe/chibis/chibi_tib_s.png">
                         </label>
 
                         <label class="c-button" for="c-button-6">
                             <input type="radio" name="carousel" id="c-button-6" value="5" />
                             <img slot="image" src="/eoe/chibis/chibi_jer.png">
+                            <img class="c-button-shadow" slot="image" src="/eoe/chibis/chibi_jer_s.png">
                         </label>
 
                         <label class="c-button" for="c-button-7">
                             <input type="radio" name="carousel" id="c-button-7" value="6" />
                             <img slot="image" src="/eoe/chibis/chibi_cyn.png">
+                            <img class="c-button-shadow" slot="image" src="/eoe/chibis/chibi_cyn_s.png">
                         </label>
 
                         <label class="c-button" for="c-button-8">
                             <input type="radio" name="carousel" id="c-button-8" value="7" />
                             <img slot="image" src="/eoe/chibis/chibi_ram.png">
+                            <img class="c-button-shadow" slot="image" src="/eoe/chibis/chibi_ram_s.png">
                         </label>
 
                         <label class="c-button" for="c-button-9">
                             <input type="radio" name="carousel" id="c-button-9" value="8" />
                             <img slot="image" src="/eoe/chibis/chibi_kir.png">
+                            <img class="c-button-shadow" slot="image" src="/eoe/chibis/chibi_kir_s.png">
                         </label>
 
                         <label class="c-button" for="c-button-10">
                             <input type="radio" name="carousel" id="c-button-10" value="9" />
                             <img slot="image" src="/eoe/chibis/chibi_isa.png">
+                            <img class="c-button-shadow" slot="image" src="/eoe/chibis/chibi_isa_s.png">
                         </label>
 
                         <label class="c-button" for="c-button-11">
                             <input type="radio" name="carousel" id="c-button-11" value="10" />
                             <img slot="image" src="/eoe/chibis/chibi_val.png">
+                            <img class="c-button-shadow" slot="image" src="/eoe/chibis/chibi_val_s.png">
                         </label>
 
                         <label class="c-button" for="c-button-12">
                             <input type="radio" name="carousel" id="c-button-12" value="11" />
                             <img slot="image" src="/eoe/chibis/chibi_naz.png">
+                            <img class="c-button-shadow" slot="image" src="/eoe/chibis/chibi_naz_s.png">
                         </label>
 
                         <label class="c-button" for="c-button-13">
                             <input type="radio" name="carousel" id="c-button-13" value="12" />
                             <img slot="image" src="/eoe/chibis/chibi_dam.png">
+                            <img class="c-button-shadow" slot="image" src="/eoe/chibis/chibi_dam_s.png">
                         </label>
 
                         <label class="c-button" for="c-button-14">
                             <input type="radio" name="carousel" id="c-button-14" value="13" />
                             <img slot="image" src="/eoe/chibis/chibi_em.png">
+                            <img class="c-button-shadow" slot="image" src="/eoe/chibis/chibi_em_s.png">
                         </label>
 
                         <label class="c-button" for="c-button-15">
                             <input type="radio" name="carousel" id="c-button-15" value="14" />
                             <img slot="image" src="/eoe/chibis/chibi_mag.png">
+                            <img class="c-button-shadow" slot="image" src="/eoe/chibis/chibi_mag_s.png">
                         </label>
 
                     </div>
@@ -240,20 +292,23 @@
                         <h1>GALLERY</h1>
                         <div class="head-underline"></div>
                     </div>
+                    <img class="gallery" src="/eoe/scs/eoe_sc_lounge.png">
+                    <img class="gallery" src="/eoe/scs/eoe_sc_dam.png">
+                    <img class="gallery" src="/eoe/scs/eoe_sc_profiles.png">
+                    <img class="gallery" src="/eoe/scs/eoe_sc_cg.png">
+                    <img class="gallery" src="/eoe/scs/eoe_sc_ros.png">
+                    <img class="gallery" src="/eoe/scs/eoe_sc_rt.png">
+                    <img class="gallery" src="/eoe/scs/eoe_sc_shop.png">
+                    <img class="gallery" src="/eoe/scs/eoe_sc_tab.png">
+                    <img class="gallery" src="/eoe/scs/eoe_sc_map.png">
                 </div>
-
-                <img src="/eoe/drinks.png">
-                <img src="/eoe/drinks.png">
-                <img src="/eoe/drinks.png">
-                <img src="/eoe/drinks.png">
-                <img src="/eoe/drinks.png">
 
             </div>
         </main>
 
         <footer class="loading">
             <p>Copyright © 2026 evelili</p>
-            <a href="/index.html" target="_blank">main site</a>
+            <a href="/index.html">main site</a>
         </footer>
 
         <script src="/eoe/eoe-main.js" type="text/javascript" defer></script>
