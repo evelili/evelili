@@ -22,6 +22,12 @@
         <script src="/components/card.js" type="text/javascript" defer blocking="render"></script>
     </head>
     <body>
+        <noscript>
+            <div class="js-disabled">
+                <p>This page requires JavaScript.</p>
+                <img src="/assets/logo_icon.svg">
+            </div>
+        </noscript>
         <main>
             <div class="splash">
                 <svg width="2771" height="373" viewBox="0 0 2771 373" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -53,12 +59,18 @@
                     <span slot="title">blog</span>
 
                     <bloglink-component slot="body">
-                        <a slot="title" href="/blog/post-1.html">Welcome to my website&nbsp;›</a>
+                        <a slot="title" href="/blog/post-2.html"><span>The Great Unity Build Incident of 2025&nbsp;›</span></a>
+                        <p slot="date">2026-09-12</p>
+                        <p slot="summary">Somehow both the highest and lowest moment of my game dev career (so far).</p>
+                    </bloglink-component>
+
+                    <bloglink-component slot="body">
+                        <a slot="title" href="/blog/post-1.html"><span>Welcome to my website&nbsp;›</span></a>
                         <p slot="date">2026-08-28</p>
                         <p slot="summary">What it says on the tin.</p>
                     </bloglink-component>
                     
-                    <a slot="footer" href="/index.html">‹ back</a>
+                    <a slot="footer" href="/index.html"><span>‹ back</span></a>
                 </card-component>
 
             </div>

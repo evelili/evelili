@@ -21,6 +21,12 @@
         <script src="/components/card.js" type="text/javascript" defer blocking="render"></script>
     </head>
     <body>
+        <noscript>
+            <div class="js-disabled">
+                <p>This page requires JavaScript.</p>
+                <img src="/assets/logo_icon.svg">
+            </div>
+        </noscript>
         <main>
             <div class="splash">
                 <svg width="2771" height="373" viewBox="0 0 2771 373" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -50,10 +56,10 @@
                 
                 <card-component class="small">
                     <span slot="title">evelili</span>
-                    <a slot="body" href="/about.html">about</a>
-                    <a slot="body" href="/end-of-elysium.html">end of elysium</a>
-                    <a slot="body" href="/blog.html">blog</a>
-                    <a slot="body" href="/faq.html">faq</a>
+                    <a slot="body" href="/about.html"><span>about</span></a>
+                    <a slot="body" href="/end-of-elysium.html"><span>end of elysium</span></a>
+                    <a slot="body" href="/blog.html"><span>blog</span></a>
+                    <a slot="body" href="/faq.html"><span>faq</span></a>
                 </card-component>
 
             </div>

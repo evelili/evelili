@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width,initial-scale=1.0">
-        <title>About</title>
+        <title>Blog</title>
 
         <link rel="preload" href="/assets/bg_pattern.svg" as="image">
         <link rel="preload" href="/assets/logo.svg" as="image">
@@ -19,6 +19,7 @@
         <link rel="icon" href="/assets/logo_icon.svg">
 
         <script src="/components/paragraph.js" type="text/javascript" defer></script>
+        <script src="/components/blogheader.js" type="text/javascript" defer></script>
         <script src="/components/card.js" type="text/javascript" defer blocking="render"></script>
     </head>
     <body>
@@ -52,18 +53,126 @@
                     </defs>
                 </svg>
             </div>
-            
+
             <div class="pagebody">
                 
-                <card-component class="small">
-                    <span slot="title">about</span>
+                <card-component class="large">
+                    <span slot="title">blog</span>
+
+                    <blogheader-component slot="body">
+                        <h2 slot="title" href="/blog/post-1.html"><span>The Great Unity Build Incident of 2025</span></h2>
+                        <p slot="date">2026-09-12</p>
+                    </blogheader-component>
+
+                    <img slot="body" src="/blog/post-2/A.png">
+
+                    <div slot="body" class="divider"></div>
 
                     <paragraph-component slot="body">
-                        <p slot="para-title"><span class="grad">Lili | she/her</span></p>
-                        <p slot="para-body">Canadian writer, artist, game developer, musician, and/or doer-of-everything.</p>
+                        <p slot="para-body">It is Saturday, March 8th, 2025. I've just finished a full playthrough of the sketch demo for EoE. Over a year of work. Hundreds, if not <i>thousands</i> of hours boiled down to an end result. It's nowhere close to done, but nowhere near where it started either. It's a milestone moment, honestly. For the first time in a very long time I'll be able to point to something tangible and visible and real.</p>
+                        <p slot="para-body">The build takes over 20 minutes to complete.</p>
+                        <p slot="para-body">I upload the .zip to itch.io and start a new game from the main menu.</p>
+                        <p slot="para-body">80&nbsp;000 error messages break my browser beneath their weight.</p>
                     </paragraph-component>
+
+                    <div slot="body" class="divider"></div>
+
+                    <paragraph-component slot="body">
+                        <p slot="para-body">It is Sunday, March 9th, 2025. I spend all day trying to get my damn game to build. This is not a fun process—it's a lot of toggling random settings, scouring the Unity discussion forums, and watching Final Fantasy XIV gameplay in 20 minute intervals through a Discord call.</p>
+                        <p slot="para-body">My attempts to redefine insanity are to no avail.</p>
+                    </paragraph-component>
+
+                    <div slot="body" class="divider"></div>
+
+                    <paragraph-component slot="body">
+                        <p slot="para-body">It is Monday, March 10th, 2025. My mind is spinning in the background during the workday, desperate to solve this problem that I, for the first time in this project, have no idea how to tackle. Some kind souls on the Unity forums hear my cries for help and gently point to my 12.7 gigabyte build report with a <i>hey maybe you should look into that</i> and a pat on the back.</p>
+                        <p slot="para-body">So I do. I spend the whole evening compressing my assets 40 times over and thanking my lucky stars most things were divisible by 4.</p>
+                        <p slot="para-body">The build takes 3 minutes to complete.</p>
+                        <p slot="para-body">I upload the .zip to itch.io and start a new game from the main menu.</p>
+                        <p slot="para-body">My browser flashes from black to white and crashes in the middle on grey.</p>
+                    </paragraph-component>
+
+                    <div slot="body" class="divider"></div>
+
+                    <paragraph-component slot="body">
+                        <p slot="para-body">It is Tuesday, March 11th, 2025. My brain tries to work on the problem in my sleep. I wake up exhausted and nowhere closer to a solution than I was before I slept. Perhaps it's a browser issue. Perhaps a hardware issue. Perhaps both. Out of desperation to <i>do something about this now, immediately,</i> I message a friend while I'm stuck at my desk and ask her to do some testing for me. She agrees.</p>
+                        <p slot="para-body">It takes a few minutes to load. The main menu works. I ask her to start a new game. She does. It takes a few more minutes to load. She tells me she gets a black screen once it finally starts, but that the keyboard and sounds still work.</p>
+                        <p slot="para-body">I briefly, momentarily lose my mind.</p>
+                        <p slot="para-body">Then I ask her to make the game fullscreen and try again.</p>
+                        <p slot="para-body">The game works.</p>
+                        <p slot="para-body">...For 14 lines.</p>
+                        <p slot="para-body">On the 15th, it hangs itself on the letter "A" without protest.</p>
+                    </paragraph-component>
+
+                    <div slot="body" class="divider"></div>
+
+                    <paragraph-component slot="body">
+                        <p slot="para-body">It is Wednesday, March 12th, 2025. I wake up at 6am and go to work.</p>
+                        <p slot="para-body">I spend all day thinking about a problem I can do nothing about.</p>
+                    </paragraph-component>
+
+                    <div slot="body" class="divider"></div>
+
+                    <paragraph-component slot="body">
+                        <p slot="para-body">It is Thursday, March 13th, 2025. And I have yet another idea.</p>
+                        <p slot="para-body">As soon as I finish work I'm at my computer, combining 327.7 megabytes of textures into this strange new concept I've discovered called "sprite atlases". Unity's interface refuses to cooperate, and I spend hours dragging and dropping hundreds of files one by one into lists that will supposedly save me a ton of space.</p>
+                        <p slot="para-body">The build takes 40 seconds to complete.</p>
+                        <p slot="para-body">I upload the .zip to itch.io and start a new game from the main menu.</p>
+                        <p slot="para-body">I play through the entire demo from start to finish.</p>
+                    </paragraph-component>
+
+                    <div slot="body" class="divider"></div>
+
+                    <paragraph-component slot="body">
+                        <p slot="para-body">It is Friday, March 14th, 2025. It is half an hour after midnight. I share the build with some friends before I get ready for bed. When I check my phone for a final time, one of them tells me he's already managed to freeze the game.</p>
+                        <p slot="para-body">My heart sinks.</p>
+                        <p slot="para-body">I ask for screenshots. He sends me a picture of a textbox on a black background with a single letter:</p>
+                        <p slot="para-body">A.</p>
+                    </paragraph-component>
+
+                    <div slot="body" class="divider"></div>
+
+                    <paragraph-component slot="body">
+                        <p slot="para-body">It is still Friday, March 14th, 2025. I wake up and try to think things through again. The error occurred in two different browsers, so that's out. But they were both on Windows 10—perhaps it's the OS?</p>
+                        <p slot="para-body">I call my brother and ask him to test the game for me on his computer. It runs perfectly. Twice. He gives me all the specs I ask for, and I scribble down a few more theories on a scrap of paper at my desk.</p>
+                        <p slot="para-body">After work I ask my first friend to try the new, smaller build on her computer.</p>
+                        <p slot="para-body">A.</p>
+                        <p slot="para-body">I ask her to turn off her ad blocker.</p>
+                        <p slot="para-body">A.</p>
+                        <p slot="para-body">I ask her to download a completely new browser.</p>
+                        <p slot="para-body">A. A. A.</p>
+                        <p slot="para-body">I ask for her computer specs, her browser specs, and a dozen technical details I don't understand the half of and don't know what to do with once I have them. I want to pull my hair out. I scrub through the recordings she sends me one after the other and watch the browser console like a hawk. But there's always nothing.</p>
+                        <p slot="para-body">No errors, no warnings, and no fans. That's the strangest part—the task manager says nothing is happening on the webpage at all. It's not an infinite loop, or memory overload. The game just decides to stop.</p>
+                        <p slot="para-body">I pull up a screenshot from each friend and stare at my computer screen in silence for a solid minute.</p>
+                        <p slot="para-body">I get a desperate, ridiculous idea.</p>
+                        <p slot="para-body">I ask my friend to humour me and try it. She agrees. I hold my breath and wait what feels like an eternity for her to message back.</p>
+                        <p slot="para-body">She finally replies.</p>
+                        <p slot="para-body">In all caps.</p>
+                    </paragraph-component>
+
+                    <div slot="body" class="divider"></div>
+
+                    <img slot="body" src="/blog/post-2/convo_1.png">
+
+                    <div slot="body" class="divider"></div>
+
+                    <paragraph-component slot="body">
+                        <p slot="para-body">It worked.</p>
+                        <p slot="para-body">I can't help laughing out loud. I am euphoric. My stupid, genius idea worked. I immediately text my brother to let him know we figured it out.</p>
+                        <p slot="para-body"><i>Guess what it was,</i> I say.</p>
+                        <p slot="para-body"><i>Memory leak,</i> he replies.</p>
+                        <p slot="para-body">But reality is stupider and funnier and a whole lot simpler in hindsight most, if not all of the time. Because while I was out here comparing hardware and operating systems and browsers and ad blockers, I ignored the most obvious connection between my friends that had been staring me in the face the entire time: the three capital letters sitting in the bottom right corners of their screens:</p>
+                        <p slot="para-body">ESP.</p>
+                        <p slot="para-body">Spanish.</p>
+                        <p slot="para-body">All she had to do was change her browser language to English.</p>
+                        <p slot="para-body"><i>And everything worked.</i></p>
+                    </paragraph-component>
+
+                    <div slot="body" class="divider"></div>
+
+                    <img slot="body" src="/blog/post-2/convo_2.png">
                     
-                    <a slot="footer" href="/index.html"><span>‹ back</span></a>
+                    <a slot="footer" href="/blog.html"><span>‹ back</span></a>
                 </card-component>
 
             </div>

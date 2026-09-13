@@ -63,5 +63,10 @@ window.addEventListener("click", (e) => {
         });
 
         destination = e.target.href;
-    }
+    } 
+    
+    // else if (e.target.matches("img")) {
+    //     // open images in new tab
+    //     window.open(e.target.getAttribute("src"));
+    // }
 });

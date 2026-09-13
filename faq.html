@@ -22,6 +22,12 @@
         <script src="/components/card.js" type="text/javascript" defer blocking="render"></script>
     </head>
     <body>
+        <noscript>
+            <div class="js-disabled">
+                <p>This page requires JavaScript.</p>
+                <img src="/assets/logo_icon.svg">
+            </div>
+        </noscript>
         <main>
             <div class="splash">
                 <svg width="2771" height="373" viewBox="0 0 2771 373" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -55,7 +61,7 @@
                     <paragraph-component slot="body">
                         <p slot="para-title"><span class="grad">How do you pronounce "evelili"?</span></p>
                         <p slot="para-body">EH-vuh-lih-lee</p>
-                        <p slot="para-body">It's a combination of Evelynn (the character) and Lili (my name).</p>
+                        <p slot="para-body">It's a combination of Evelynn (the League character) and Lili (my name).</p>
                     </paragraph-component>
 
                     <paragraph-component slot="body">
@@ -88,7 +94,7 @@
                         <p slot="para-body">When it's done.</p>
                     </paragraph-component>
                     
-                    <a slot="footer" href="/index.html">‹ back</a>
+                    <a slot="footer" href="/index.html"><span>‹ back</span></a>
                 </card-component>
 
             </div>

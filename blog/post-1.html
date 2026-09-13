@@ -23,6 +23,12 @@
         <script src="/components/card.js" type="text/javascript" defer blocking="render"></script>
     </head>
     <body>
+        <noscript>
+            <div class="js-disabled">
+                <p>This page requires JavaScript.</p>
+                <img src="/assets/logo_icon.svg">
+            </div>
+        </noscript>
         <main>
             <div class="splash">
                 <svg width="2771" height="373" viewBox="0 0 2771 373" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -54,7 +60,7 @@
                     <span slot="title">blog</span>
 
                     <blogheader-component slot="body">
-                        <h2 slot="title" href="/blog/post-1.html">Welcome to my website</h2>
+                        <h2 slot="title" href="/blog/post-1.html"><span>Welcome to my website</span></h2>
                         <p slot="date">2026-08-28</p>
                     </blogheader-component>
 
@@ -62,12 +68,18 @@
                         <p slot="para-body">Hi. I'm Lili, also known as evelili, or eve-lili, or evil-lili, or "the person who wrote that critically acclaimed horse girl fanfiction The Twilight Effect". Take your pick. But please: don't call me Eve.</p>
                     </paragraph-component>
 
-                    <img slot="body" src="/assets/logo.svg">
+                    <div slot="body" class="divider"></div>
+
+                    <img slot="body" src="/blog/post-1/lili_intro.png">
+
+                    <div slot="body" class="divider"></div>
 
                     <paragraph-component slot="body">
                         <p slot="para-body">Now, unfortunately for everyone, I am a writer before I am an artist. Yapping runs in my blood. Character limits and restrictive formatting options have historically protected you from my unfiltered ramblings on other platforms, but here?</p>
                         <p slot="para-body">This is my house. You're free to leave at any time.</p>
                     </paragraph-component>
+
+                    <div slot="body" class="divider"></div>
 
                     <paragraph-component slot="body">
                         <p slot="para-title"><span class="grad">What to expect from this blog</span></p>
@@ -75,7 +87,11 @@
                         <p slot="para-body">Oh, yeah. Devlogs. I've vagueposted about it before, but to finally put it into public words: I am making a video game called End of Elysium.</p>
                     </paragraph-component>
 
-                    <img slot="body" src="/assets/logo.svg">
+                    <div slot="body" class="divider"></div>
+
+                    <img slot="body" src="/blog/post-1/eoe_logo.png">
+
+                    <div slot="body" class="divider"></div>
 
                     <paragraph-component slot="body">
                         <p slot="para-body">My silence on the matter was part preference, part necessity, and part I-don't-have-the-time. For context, I've spent the last four years juggling, in some particular order:</p>
@@ -103,13 +119,19 @@
                         <p slot="para-body">By the way, do you want to know how much time I was losing to social media?</p>
                     </paragraph-component>
 
+                    <div slot="body" class="divider"></div>
+
                     <paragraph-component slot="body">
                         <p slot="para-title"><span class="grad">A tangent on time</span></p>
                         <p slot="para-body">I was not a standard user. I did not use "recommended" or "trending" feeds at all. I would only read posts from newest to oldest until I hit posts I'd already read, and then close the app. I was already spending far less time on social media than my peers.</p>
                         <p slot="para-body">I was losing at least four hours <span class="emphasis">every single day.</span></p>
                     </paragraph-component>
 
-                    <img slot="body" src="/assets/logo.svg">
+                    <div slot="body" class="divider"></div>
+
+                    <img slot="body" src="/blog/post-1/lili_realization.png">
+
+                    <div slot="body" class="divider"></div>
 
                     <paragraph-component slot="body">
                         <p slot="para-body">But it was just an hour or so on the train to work. It was just half an hour over lunch. It was just 15 minutes here, 15 minutes there, replying to a comment here, and reblogging a post there. And a few hours to catch up with things before bed? That's normal! Everyone does it!</p>
@@ -119,11 +141,17 @@
                         <p slot="para-body">You don't realize how exhausting it is until you're out of it. And sure, I miss the good parts of it. I miss sharing the things I make. I miss sharing other people's creations. I miss what social media used to be so, so badly. I wish things hadn't changed. But as things stand, the cons outweigh the pros. I'm much happier limiting my time on the internet to direct messages, voice calls, and the depths of Unity's terribly structured forums.</p>
                     </paragraph-component>
 
-                    <img slot="body" src="/assets/logo.svg">
+                    <div slot="body" class="divider"></div>
+
+                    <img slot="body" src="/blog/post-1/lili_pepe_fall.png">
+
+                    <div slot="body" class="divider"></div>
 
                     <paragraph-component slot="body">
                         <p slot="para-body">Yeah. Unity. I'll take those condolences now, please and thanks.</p>
                     </paragraph-component>
+
+                    <div slot="body" class="divider"></div>
 
                     <paragraph-component slot="body">
                         <p slot="para-title"><span class="grad">Game development takes time (and also sucks)</span></p>
@@ -133,14 +161,22 @@
                         <p slot="para-body">Then, after many prototypes and playtests and rewrites of the same damn story over and over again, the prologue was in a stable state with placeholder assets in March 2025. I only just wrapped the final version of the prologue July 2026.</p>
                     </paragraph-component>
 
-                    <img slot="body" src="/assets/logo.svg">
+                    <div slot="body" class="divider"></div>
+
+                    <img slot="body" src="/blog/post-1/eoe_compare.png">
+
+                    <div slot="body" class="divider"></div>
 
                     <paragraph-component slot="body">
                         <p slot="para-body">In other words: it took me 1 year to go from 0% to 95%. It took me 1.5 years to go from 95% to 100%.</p>
                         <p slot="para-body">Granted, a lot of that effort was an investment into the game's future. If, hypothetically, I spent weeks agonizing over the 8 incredibly detailed backgrounds used in the prologue, I now get to reuse those backgrounds for the rest of the game. It's the same with the character sprites, and the music, and the sound effects, and the UI, and wow it's starting to sound like making the prologue of a game is about as much work as making the actual game. Who knew!</p>
                     </paragraph-component>
 
-                    <img slot="body" src="/assets/logo.svg">
+                    <div slot="body" class="divider"></div>
+
+                    <img slot="body" src="/blog/post-1/i_hate_video_games.png">
+
+                    <div slot="body" class="divider"></div>
 
                     <paragraph-component slot="body">
                         <p slot="para-body">But yeah. The prologue's wrapped, somehow. No, you can't play it yet. It's too risky to share a small part of a story-based game that, based on how long the prologue took, won't be ready for release until 2032 at the earliest. That's both from a marketing standpoint and from a narrative one. Trust me on this.</p>
@@ -153,7 +189,7 @@
                         <p slot="para-body">I just need a little more time to write it.</p>
                     </paragraph-component>
                     
-                    <a slot="footer" href="/blog.html">‹ back</a>
+                    <a slot="footer" href="/blog.html"><span>‹ back</span></a>
                 </card-component>
 
             </div>
