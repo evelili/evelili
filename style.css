@@ -19,6 +19,10 @@
     --inner-padding: min(5.9259vw, 32px);
 }
 
+html {
+    overscroll-behavior: none;
+}
+
 body {
     margin: 0;
     font-family: 'Roboto Condensed', sans-serif;
