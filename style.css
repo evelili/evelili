@@ -19,9 +19,9 @@
     --inner-padding: min(5.9259vw, 32px);
 }
 
-html {
+/* html {
     overscroll-behavior: none;
-}
+} */
 
 body {
     margin: 0;
@@ -177,7 +177,7 @@ main {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: var(--page-padding);
+    padding: 24px var(--page-padding);
     min-height: calc(var(--vh, 1vh) * 100);
 }
 
@@ -243,7 +243,7 @@ card-component {
 
 .card-wrapper {
     border-radius: 12px;
-    padding: var(--inner-padding);
+    padding: 32px var(--inner-padding);
     display: flex;
     flex-direction: column;
     align-items: center;

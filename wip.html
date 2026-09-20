@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width,initial-scale=1.0">
-        <title>Home</title>
+        <title>About</title>
 
         <link rel="preload" href="/assets/bg_pattern.svg" as="image">
         <link rel="preload" href="/assets/logo.svg" as="image">
@@ -20,6 +20,7 @@
 
         <link rel="icon" href="/assets/logo_icon.svg">
 
+        <script src="/components/paragraph.js" type="text/javascript" defer></script>
         <script src="/components/card.js" type="text/javascript" defer blocking="render"></script>
     </head>
     <body>
@@ -57,11 +58,13 @@
             <div class="pagebody">
                 
                 <card-component class="small">
-                    <span slot="title">evelili</span>
-                    <a slot="body" href="/about.html"><span>about</span></a>
-                    <a slot="body" href="/wip.html"><span>end of elysium</span></a>
-                    <a slot="body" href="/blog.html"><span>blog</span></a>
-                    <a slot="body" href="/faq.html"><span>faq</span></a>
+                    <span slot="title">wip</span>
+
+                    <paragraph-component slot="body">
+                        <p slot="para-body" style="text-align:center">Under construction...</p>
+                    </paragraph-component>
+                    
+                    <a slot="footer" href="/index.html"><span>‹ back</span></a>
                 </card-component>
 
             </div>
