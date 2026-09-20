@@ -5,9 +5,10 @@
         <meta name="viewport" content="width=device-width,initial-scale=1.0">
         <title>End of Elysium</title>
 
-        <link rel="preload" href="/eoe/scribble_bg.png" as="image">
-        <link rel="preload" href="/eoe/key_art.png" as="image">
-        <link rel="preload" href="/eoe/eoe_logo.png" as="image">
+        <link rel="preload" href="/eoe/scribble_square.png" as="image" fetchpriority="high">
+        <link rel="preload" href="/eoe/key_art.png" as="image" fetchpriority="high">
+        <link rel="preload" href="/eoe/eoe_logo.png" as="image" fetchpriority="high">
+        <link rel="preload" href="/eoe/halo.png" as="image" fetchpriority="high">
 
         <link rel="preload" href="/eoe/eoe-style.css" as="style">
         <link rel="stylesheet" href="/eoe/eoe-style.css">
@@ -30,20 +31,14 @@
             </div>
         </noscript>
         <main class="loading">
-            <div class="page-shadow"></div>
-            <div class="scribble"></div>
-            <div class="key-halo-wrapper">
+            <div class="page-shadow" aria-hidden="true"></div>
+            <div class="scribble" aria-hidden="true"></div>
+            <div class="key-halo-wrapper" aria-hidden="true">
                 <img class="key-halo" src="/eoe/halo.png">
             </div>
-            <img class="key-art" src="/eoe/key_art.png">
-            <!-- <img class="halo h-left h-4" src="/eoe/halo.png">
-            <img class="halo h-right h-4" src="/eoe/halo.png">
-            <img class="halo h-left h-3" src="/eoe/halo.png">
-            <img class="halo h-right h-3" src="/eoe/halo.png">
-            <img class="halo h-left h-2" src="/eoe/halo.png">
-            <img class="halo h-right h-2" src="/eoe/halo.png"> -->
-            <img class="halo h-left h-1" src="/eoe/halo.png">
-            <img class="halo h-right h-1" src="/eoe/halo.png">
+            <img class="key-art" src="/eoe/key_art.png" alt="Illustration of an angel facing left. Her arm is outstretched in front of her with her fingers pointed like a gun.">
+            <img class="halo h-left h-1" src="/eoe/halo.png" aria-hidden="true">
+            <img class="halo h-right h-1" src="/eoe/halo.png" aria-hidden="true">
             <div class="pagebody">
 
                 <div class="landing">
@@ -66,7 +61,6 @@
                                 <p><span class="emph">End of Elysium (EoE)</span> is a visual novel adventure game about Lilith, Elysium's worst bartender, and her conversations with the most terrible patrons she's ever met.</p>
                                  <p>Unfortunately for Lilith, dealing with Elysium's unsavoury clientele requires tact, charisma, and an overdose of patience... but, for employees lacking in all three, logical deduction is management's approved alternative.</p>
                                 <p>Use your logic to cut through lies, confront the past, and do whatever it takes to reach the truth—even if it burns everything Elysium stands for to the ground.</p>
-                                <!-- <p>However, each patron has their own unsavoury reasons for coming to her establishment, and none are very willing to share. If Lilith wants to fully uncover their stories, she must use logic to uncover the hidden truth about her patrons' lives.</p> -->
                             </div>
                             <img src="/eoe/drinks.png" alt="" class="img-small">
                         </div>
@@ -104,197 +98,194 @@
                         <div class="carousel-3d">
 
                             <characard-component class="a">
-                                <img slot="image" src="/eoe/charas/lilith.png">
+                                <img slot="image" src="/eoe/charas/lilith.png" alt="A woman with glasses and dark hair in a high ponytail. She is wearing a white dress shirt, a black vest, gold sleeve garters, a gold split tie, and a gold collar pin. She has a mole under her right eye.">
                                 <span slot="title">LILITH</span>
                                 <span slot="summary">An employee of Elysium. Terrible at conversation, and an even worse bartender.</span>
                             </characard-component>
 
                             <characard-component class="b">
-                                <img slot="image" src="/eoe/charas/asmodeus.png">
+                                <img slot="image" src="/eoe/charas/asmodeus.png" alt="A man with an undercut and sideswept bleached hair wearing a white dress shirt, a black vest, a gold tie, and a gold collar pin. He has 5 o'clock shadow, multiple ear piercings, and snakebites.">
                                 <span slot="title">ASMODEUS DEVA</span>
                                 <span slot="summary">An employee of Elysium. Pretends to be grumpier than he really is.</span>
                             </characard-component>
 
                             <characard-component class="c">
-                                <img slot="image" src="/eoe/charas/vesper.png">
+                                <img slot="image" src="/eoe/charas/vesper.png" alt="A woman with long, curly hair wearing a white dress shirt, a black vest, gold sleeve garters, and a gold split tie. She has a pair of sunglasses on top of her hair.">
                                 <span slot="title">VESPER ASPHODEL</span>
                                 <span slot="summary">Elysium's bar manager by necessity, not choice. Never on time for work.</span>
                             </characard-component>
 
                             <characard-component class="d">
-                                <img slot="image" src="/eoe/charas/rosario.png">
+                                <img slot="image" src="/eoe/charas/rosario.png" alt="A woman in a black motorcycle helmet with a red leather jacket draped over her shoulders. She is wearing a black t-shirt with a gold pattern and white motorcycle pants.">
                                 <span slot="title">ROSARIO ROJAS</span>
                                 <span slot="summary">A biker who speaks with actions instead of words. Prefers to keep the helmet on.</span>
                             </characard-component>
 
                             <characard-component class="e">
-                                <img slot="image" src="/eoe/charas/tiberius.png">
+                                <img slot="image" src="/eoe/charas/tiberius.png" alt="A main with short, messy hair and stubble wearing a white hoodie with a red hood. He has a black backpack over one shoulder and a pencil behind his ear.">
                                 <span slot="title">TIBERIUS GREY</span>
                                 <span slot="summary">A wisecracker with a resigned personality. Perpetually on the verge of sleep.</span>
                             </characard-component>
 
                             <characard-component class="f">
-                                <img slot="image" src="/eoe/charas/jericho.png">
+                                <img slot="image" src="/eoe/charas/jericho.png" alt="A man with a red headband and dark hair pulled into a bun. He is wearing a white chef's uniform with red lines on the front and a black apron.">
                                 <span slot="title">JERICHO MOON</span>
                                 <span slot="summary">A charismatic man with an eye for detail. Never forgets to wear his smile.</span>
                             </characard-component>
 
                             <characard-component class="g">
-                                <img slot="image" src="/eoe/charas/cynthia.png">
+                                <img slot="image" src="/eoe/charas/cynthia.png" alt="A teenage girl wearing a red dress shirt, a white sweater vest with a gold brooch, and a grey skirt. She has dark hair with two gold hair clips holding back her bangs.">
                                 <span slot="title">CYNTHIA BELMONTE</span>
                                 <span slot="summary">A reserved young lady who blends into the background. Dislikes eye contact.</span>
                             </characard-component>
 
                             <characard-component class="h">
-                                <img slot="image" src="/eoe/charas/rameses.png">
+                                <img slot="image" src="/eoe/charas/rameses.png" alt="A man with his hair in overswept thick locs dyed red at the ends. He is wearing a white leather jacket with red trim and a fur collar over a black t-shirt with a flame graphic. He has two gold necklaces.">
                                 <span slot="title">RAMESES LAURENT</span>
                                 <span slot="summary">A famous actor at the height of his career. Never gets tired of saying his own name.</span>
                             </characard-component>
 
                             <characard-component class="i">
-                                <img slot="image" src="/eoe/charas/kirari.png">
+                                <img slot="image" src="/eoe/charas/kirari.png" alt="A woman with long, light hair wearing red hoop earrings and an asymmetrical black dress with a red belt.">
                                 <span slot="title">KIRARI AMAMI</span>
                                 <span slot="summary">An enigmatic woman at the whims of her own curiosity. Prone to staring.</span>
                             </characard-component>
 
                             <characard-component class="j">
-                                <img slot="image" src="/eoe/charas/isadora.png">
+                                <img slot="image" src="/eoe/charas/isadora.png" alt="A woman with textured hair in a high afro puff. She is wearing a cape-like white top with a single red lapel, a smart watch, gold glasses with red lenses, and a black fingerless glove on her left hand.">
                                 <span slot="title">ISADORA HAWTHORNE</span>
                                 <span slot="summary">A showwoman with a silver tongue. Took the phrase "rose-coloured glasses" literally.</span>
                             </characard-component>
 
                             <characard-component class="k">
-                                <img slot="image" src="/eoe/charas/valentine.png">
+                                <img slot="image" src="/eoe/charas/valentine.png" alt="A masked woman with bangs and a long braid with a gold hairpin. She is wearing a black short-sleeved turtleneck, a gold necklace, and a red robe over her right arm.">
                                 <span slot="title">VALENTINE ZHURONG</span>
                                 <span slot="summary">A restless, reckless woman quick to panic. Wears her heart on her sleeve against her will.</span>
                             </characard-component>
 
                             <characard-component class="l">
-                                <img slot="image" src="/eoe/charas/nazareth.png">
+                                <img slot="image" src="/eoe/charas/nazareth.png" alt="A man with curly hair wearing a white suit jacket with red lapels over a black turtleneck. He has a dangling gold earring in his left ear, a gold stud in his right ear, and a gold necklace.">
                                 <span slot="title">NAZARETH ALDERAMIN</span>
                                 <span slot="summary">An aloof gossip with an attitude. Very particular about appearances.</span>
                             </characard-component>
 
                             <characard-component class="m">
-                                <img slot="image" src="/eoe/charas/damian.png">
+                                <img slot="image" src="/eoe/charas/damian.png" alt="A man with spiky hair wearing a red dress shirt with rolled sleeves and a popped collar. His tie is untied and his forearms are tattooed.">
                                 <span slot="title">DAMIAN QUINN</span>
                                 <span slot="summary">A smug man who never hears "no". Loves flaunting his tattoos and his knife, in either order.</span>
                             </characard-component>
 
                             <characard-component class="n">
-                                <img slot="image" src="/eoe/charas/emery.png">
+                                <img slot="image" src="/eoe/charas/emery.png" alt="A person wearing a hooded red-and-white letterman jacket. They have long hair with bangs that cover one eye.">
                                 <span slot="title">EMERY IRIS</span>
                                 <span slot="summary">An antisocial grifter. Has no qualms about lying through their pointed teeth.</span>
                             </characard-component>
 
                             <characard-component class="o">
-                                <img slot="image" src="/eoe/charas/magnolia.png">
+                                <img slot="image" src="/eoe/charas/magnolia.png" alt="A woman with short, light hair in a red dress with a black jacket and black belt. She is wearing pearl earrings, a pearl necklace, and a wide-brimmed hat with a gold hat pin.">
                                 <span slot="title">MAGNOLIA BELMONTE</span>
                                 <span slot="summary">A calculating businesswoman and mother. Difficult at her best; impossible at her worst.</span>
                             </characard-component>
 
                         </div>
 
-                        <div class="carousel-controls">
+                        <div class="carousel-controls" aria-hidden="true">
                             <button class="arrow-button left-arrow"><svg width="20" height="20" viewBox="1 1 19 25" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 13.3137L12.3137 2L15.1421 4.82843L6.65685 13.3137L15.1421 21.799L12.3137 24.6274L1 13.3137Z" fill="white"/><path d="M15.1421 10.4853L12.3137 13.3137L15.1421 16.1421L17.9706 13.3137L15.1421 10.4853Z" fill="white"/></svg></button>
                             <button class="arrow-button right-arrow"><svg width="20" height="20" viewBox="-1 1 19 25" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M17.9706 13.3137L6.65685 24.6274L3.82843 21.799L12.3137 13.3137L3.82843 4.82843L6.65685 2L17.9706 13.3137Z" fill="white"/><path d="M3.82843 16.1421L6.65685 13.3137L3.82843 10.4853L1 13.3137L3.82843 16.1421Z" fill="white"/></svg></button>
-
-                            <!-- <button class="arrow-button left-arrow"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#ffffff"><path d="M560-240 320-480l240-240 56 56-184 184 184 184-56 56Z"/></svg></button>
-                            <button class="arrow-button right-arrow"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#ffffff"><path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z"/></svg></button> -->
                         </div>
                         
                     </div>
 
-                    <div class="carousel-buttons">
+                    <div class="carousel-buttons" aria-hidden="true">
 
                         <label class="c-button" for="c-button-1">
                             <input type="radio" name="carousel" id="c-button-1" value="0" checked />
-                            <img slot="image" src="/eoe/chibis/chibi_lil.png">
-                            <img class="c-button-shadow" slot="image" src="/eoe/chibis/chibi_lil_s.png">
+                            <img slot="image" src="/eoe/chibis/chibi_lil.png" alt="Lilith">
+                            <img class="c-button-shadow" slot="image" src="/eoe/chibis/chibi_lil_s.png" alt="">
                         </label>
 
                         <label class="c-button" for="c-button-2">
                             <input type="radio" name="carousel" id="c-button-2" value="1" />
-                            <img slot="image" src="/eoe/chibis/chibi_asmo.png">
-                            <img class="c-button-shadow" slot="image" src="/eoe/chibis/chibi_asmo_s.png">
+                            <img slot="image" src="/eoe/chibis/chibi_asmo.png" alt="Asmodeus">
+                            <img class="c-button-shadow" slot="image" src="/eoe/chibis/chibi_asmo_s.png" alt="">
                         </label>
 
                         <label class="c-button" for="c-button-3">
                             <input type="radio" name="carousel" id="c-button-3" value="2" />
-                            <img slot="image" src="/eoe/chibis/chibi_vesp.png">
-                            <img class="c-button-shadow" slot="image" src="/eoe/chibis/chibi_vesp_s.png">
+                            <img slot="image" src="/eoe/chibis/chibi_vesp.png" alt="Vesper">
+                            <img class="c-button-shadow" slot="image" src="/eoe/chibis/chibi_vesp_s.png" alt="">
                         </label>
 
                         <label class="c-button" for="c-button-4">
                             <input type="radio" name="carousel" id="c-button-4" value="3" />
-                            <img slot="image" src="/eoe/chibis/chibi_ros.png">
-                            <img class="c-button-shadow" slot="image" src="/eoe/chibis/chibi_ros_s.png">
+                            <img slot="image" src="/eoe/chibis/chibi_ros.png" alt="Rosario">
+                            <img class="c-button-shadow" slot="image" src="/eoe/chibis/chibi_ros_s.png" alt="">
                         </label>
 
                         <label class="c-button" for="c-button-5">
                             <input type="radio" name="carousel" id="c-button-5" value="4" />
-                            <img slot="image" src="/eoe/chibis/chibi_tib.png">
-                            <img class="c-button-shadow" slot="image" src="/eoe/chibis/chibi_tib_s.png">
+                            <img slot="image" src="/eoe/chibis/chibi_tib.png" alt="Tiberius">
+                            <img class="c-button-shadow" slot="image" src="/eoe/chibis/chibi_tib_s.png" alt="">
                         </label>
 
                         <label class="c-button" for="c-button-6">
                             <input type="radio" name="carousel" id="c-button-6" value="5" />
-                            <img slot="image" src="/eoe/chibis/chibi_jer.png">
-                            <img class="c-button-shadow" slot="image" src="/eoe/chibis/chibi_jer_s.png">
+                            <img slot="image" src="/eoe/chibis/chibi_jer.png" alt="Jericho">
+                            <img class="c-button-shadow" slot="image" src="/eoe/chibis/chibi_jer_s.png" alt="">
                         </label>
 
                         <label class="c-button" for="c-button-7">
                             <input type="radio" name="carousel" id="c-button-7" value="6" />
-                            <img slot="image" src="/eoe/chibis/chibi_cyn.png">
-                            <img class="c-button-shadow" slot="image" src="/eoe/chibis/chibi_cyn_s.png">
+                            <img slot="image" src="/eoe/chibis/chibi_cyn.png" alt="Cynthia">
+                            <img class="c-button-shadow" slot="image" src="/eoe/chibis/chibi_cyn_s.png" alt="">
                         </label>
 
                         <label class="c-button" for="c-button-8">
                             <input type="radio" name="carousel" id="c-button-8" value="7" />
-                            <img slot="image" src="/eoe/chibis/chibi_ram.png">
-                            <img class="c-button-shadow" slot="image" src="/eoe/chibis/chibi_ram_s.png">
+                            <img slot="image" src="/eoe/chibis/chibi_ram.png" alt="Rameses">
+                            <img class="c-button-shadow" slot="image" src="/eoe/chibis/chibi_ram_s.png" alt="">
                         </label>
 
                         <label class="c-button" for="c-button-9">
                             <input type="radio" name="carousel" id="c-button-9" value="8" />
-                            <img slot="image" src="/eoe/chibis/chibi_kir.png">
-                            <img class="c-button-shadow" slot="image" src="/eoe/chibis/chibi_kir_s.png">
+                            <img slot="image" src="/eoe/chibis/chibi_kir.png" alt="Kirari">
+                            <img class="c-button-shadow" slot="image" src="/eoe/chibis/chibi_kir_s.png" alt="">
                         </label>
 
                         <label class="c-button" for="c-button-10">
                             <input type="radio" name="carousel" id="c-button-10" value="9" />
-                            <img slot="image" src="/eoe/chibis/chibi_isa.png">
-                            <img class="c-button-shadow" slot="image" src="/eoe/chibis/chibi_isa_s.png">
+                            <img slot="image" src="/eoe/chibis/chibi_isa.png" alt="Isadora">
+                            <img class="c-button-shadow" slot="image" src="/eoe/chibis/chibi_isa_s.png" alt="">
                         </label>
 
                         <label class="c-button" for="c-button-11">
                             <input type="radio" name="carousel" id="c-button-11" value="10" />
-                            <img slot="image" src="/eoe/chibis/chibi_val.png">
-                            <img class="c-button-shadow" slot="image" src="/eoe/chibis/chibi_val_s.png">
+                            <img slot="image" src="/eoe/chibis/chibi_val.png" alt="Valentine">
+                            <img class="c-button-shadow" slot="image" src="/eoe/chibis/chibi_val_s.png" alt="">
                         </label>
 
                         <label class="c-button" for="c-button-12">
                             <input type="radio" name="carousel" id="c-button-12" value="11" />
-                            <img slot="image" src="/eoe/chibis/chibi_naz.png">
-                            <img class="c-button-shadow" slot="image" src="/eoe/chibis/chibi_naz_s.png">
+                            <img slot="image" src="/eoe/chibis/chibi_naz.png" alt="Nazareth">
+                            <img class="c-button-shadow" slot="image" src="/eoe/chibis/chibi_naz_s.png" alt="">
                         </label>
 
                         <label class="c-button" for="c-button-13">
                             <input type="radio" name="carousel" id="c-button-13" value="12" />
-                            <img slot="image" src="/eoe/chibis/chibi_dam.png">
-                            <img class="c-button-shadow" slot="image" src="/eoe/chibis/chibi_dam_s.png">
+                            <img slot="image" src="/eoe/chibis/chibi_dam.png" alt="Damian">
+                            <img class="c-button-shadow" slot="image" src="/eoe/chibis/chibi_dam_s.png" alt="">
                         </label>
 
                         <label class="c-button" for="c-button-14">
                             <input type="radio" name="carousel" id="c-button-14" value="13" />
-                            <img slot="image" src="/eoe/chibis/chibi_em.png">
-                            <img class="c-button-shadow" slot="image" src="/eoe/chibis/chibi_em_s.png">
+                            <img slot="image" src="/eoe/chibis/chibi_em.png" alt="Emery">
+                            <img class="c-button-shadow" slot="image" src="/eoe/chibis/chibi_em_s.png" alt="">
                         </label>
 
                         <label class="c-button" for="c-button-15">
                             <input type="radio" name="carousel" id="c-button-15" value="14" />
-                            <img slot="image" src="/eoe/chibis/chibi_mag.png">
-                            <img class="c-button-shadow" slot="image" src="/eoe/chibis/chibi_mag_s.png">
+                            <img slot="image" src="/eoe/chibis/chibi_mag.png" alt="Magnolia">
+                            <img class="c-button-shadow" slot="image" src="/eoe/chibis/chibi_mag_s.png" alt="">
                         </label>
 
                     </div>
@@ -306,15 +297,42 @@
                         <h1>GALLERY</h1>
                         <div class="head-underline"></div>
                     </div>
-                    <img class="gallery" src="/eoe/scs/eoe_sc_lounge.png">
-                    <img class="gallery" src="/eoe/scs/eoe_sc_dam.png">
-                    <img class="gallery" src="/eoe/scs/eoe_sc_profiles.png">
-                    <img class="gallery" src="/eoe/scs/eoe_sc_cg.png">
-                    <img class="gallery" src="/eoe/scs/eoe_sc_ros.png">
-                    <img class="gallery" src="/eoe/scs/eoe_sc_rt.png">
-                    <img class="gallery" src="/eoe/scs/eoe_sc_shop.png">
-                    <img class="gallery" src="/eoe/scs/eoe_sc_tab.png">
-                    <img class="gallery" src="/eoe/scs/eoe_sc_map.png">
+                    <a href="/eoe/scs/eoe_sc_lounge.png" target="_blank">
+                        <img class="gallery" src="/eoe/scs/eoe_sc_lounge_1280.png" alt="An in-game screenshot of a bar lounge. A man with a notepad is sitting on the left couch. A woman smoking a cigarette and a teenage girl are sitting on the right couch.">
+                    </a>
+                    
+                    <a href="/eoe/scs/eoe_sc_dam.png" target="_blank">
+                        <img class="gallery" src="/eoe/scs/eoe_sc_dam_1280.png" alt="An in-game screenshot of Lilith talking to a man who is spinning a knife. She is visibly annoyed.">
+                    </a>
+                    
+                    <a href="/eoe/scs/eoe_sc_profiles.png" target="_blank">
+                        <img class="gallery" src="/eoe/scs/eoe_sc_profiles_1280.png" alt="An in-game screenshot of the profile page for Rameses Laurent.">
+                    </a>
+                    
+                    <a href="/eoe/scs/eoe_sc_cg.png" target="_blank">
+                        <img class="gallery" src="/eoe/scs/eoe_sc_cg_1280.png" alt="An in-game screenshot of a character illustration. Rameses is confidently sitting on the counter of the bar. Lilith is staring at him with a startled expression.">
+                    </a>
+                    
+                    <a href="/eoe/scs/eoe_sc_ros.png" target="_blank">
+                        <img class="gallery" src="/eoe/scs/eoe_sc_ros_1280.png" alt="An in-game screenshot of Lilith talking to a woman in a motorcycle helmet. She looks exasperated.">
+                    </a>
+                    
+                    <a href="/eoe/scs/eoe_sc_rt.png" target="_blank">
+                        <img class="gallery" src="/eoe/scs/eoe_sc_rt_1280.png" alt="An in-game screenshot of a table by a window. A masked woman is sitting in the left chair. A woman holding a wine glass is sitting in the right chair.">
+                    </a>
+                    
+                    <a href="/eoe/scs/eoe_sc_shop.png" target="_blank">
+                        <img class="gallery" src="/eoe/scs/eoe_sc_shop_1280.png" alt="An in-game screenshot of the shop menu. A note is taped over the selected drink that reads &quot;Don't even try, girlie&quot;.">
+                    </a>
+                    
+                    <a href="/eoe/scs/eoe_sc_tab.png" target="_blank">
+                        <img class="gallery" src="/eoe/scs/eoe_sc_tab_1280.png" alt="An in-game screenshot of the tab settlement menu for Rameses Laurent.">
+                    </a>
+                    
+                    <a href="/eoe/scs/eoe_sc_map.png" target="_blank">
+                        <img class="gallery" src="/eoe/scs/eoe_sc_map_1280.png" alt="An in-game screenshot of Elysium seen top-down on a map. Each character's location is marked with a sticker in the corresponding area. Lilith's area is highlighted.">
+                    </a>
+                    
                 </div>
 
             </div>
