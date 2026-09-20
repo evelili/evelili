@@ -85,7 +85,7 @@ img {
     width: var(--max-width);
     position: absolute;
     /* height: calc(var(--vh, 1vh) * 100); */
-    height: 100dvh;
+    height: 100svh;
     justify-self: center;
 
     /* width: 100%; */
@@ -93,6 +93,10 @@ img {
     box-sizing: border-box;
 
     /* display:none; */
+
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: -2;
 }
 
 img.key-halo {
@@ -120,7 +124,7 @@ img.halo {
     position: fixed;
     z-index: -12;
     /* height: calc(var(--vh, 1vh) * 100); */
-    height: 100dvh;
+    height: 100svh;
     aspect-ratio: 1;
     max-width: none;
     opacity: 0.5;
@@ -206,7 +210,7 @@ img.halo {
     position: fixed;
     /* justify-self: center; */
     /* height: calc(var(--vh, 1vh) * 100); */
-    height: 100dvh;
+    height: 100vh;
     background-image: linear-gradient(to right, #25242200 0%, #252422cc 20%, var(--col-dark) 30%, var(--col-dark) 70%, #252422cc 80%, #25242200 100%);
     width: calc(var(--max-width) * 1.5);
     z-index: -11;
@@ -302,7 +306,7 @@ img.halo {
     /* background-image: url(/eoe/scribble_bg.jpg); */
     /* background-size: cover; */
     /* height: calc(var(--vh, 1vh) * 100); */
-    height: 100dvh;
+    height: 100svh;
     width: 100%;
     z-index: -10;
     /* background-repeat: no-repeat; */
@@ -339,7 +343,7 @@ img.halo {
 .key-art {
     position: absolute;
     /* height: calc(var(--vh, 1vh) * 100); */
-    height: 100dvh;
+    height: 100svh;
     object-fit: cover;
     filter: drop-shadow(0px 1px 2px var(--col-dark)) drop-shadow(0px 0px 4px var(--col-dark)) drop-shadow(0px 0px 12px var(--col-dark));
     z-index: -1;
@@ -358,9 +362,9 @@ img.halo {
     padding: 0px 24px 48px 24px;
     background-image: linear-gradient(#25242200 75%, var(--col-dark) 99%), linear-gradient(#25242233, #25242211), linear-gradient(to top,  #25242200 20%, #252422cc 85%, var(--col-dark) 95%), linear-gradient(#25242200 75%, var(--col-dark) 99%);
     /* background-position: top center, top center, center top calc(var(--vh, 1vh) * 100), bottom center; */
-    background-position: top center, top center, center top 100dvh, bottom center;
+    background-position: top center, top center, center top 100svh, bottom center;
     /* background-size: auto calc(var(--vh, 1vh) * 100), auto calc(var(--vh, 1vh) * 100); */
-    background-size: auto 100dvh, auto 100dvh;
+    background-size: auto 100svh, auto 100svh;
     background-repeat: no-repeat;
     width: 100vw;
     box-sizing: border-box;
@@ -370,7 +374,7 @@ img.halo {
 
 .landing {
     /* height: calc(var(--vh, 1vh) * 100); */
-    height: 100dvh;
+    height: 100svh;
     box-sizing: border-box;
     max-width: var(--max-width);
     width: 100%;
@@ -739,7 +743,7 @@ input[type="radio"] {
 .js-disabled {
     position: absolute;
     width: 100%;
-    height: 100dvh;
+    height: 100vh;
     background-color: #252422cc;
     color: white;
     font-family: 'Economica', sans-serif;
