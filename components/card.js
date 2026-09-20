@@ -73,3 +73,12 @@ window.addEventListener("click", (e) => {
     //     window.open(e.target.getAttribute("src"));
     // }
 });
+
+// make the page height correct on mobile ough
+var vh = window.innerHeight * 0.01;
+document.documentElement.style.setProperty('--vh', `${vh}px`);
+
+window.addEventListener('resize', () => {
+    vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty('--vh', `${vh}px`);
+});

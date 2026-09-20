@@ -75,3 +75,18 @@ document.addEventListener("DOMContentLoaded", (e) => {
     document.querySelector("main").classList.remove("loading");
     document.querySelector("footer").classList.remove("loading");
 });
+
+// make the page height correct on mobile ough
+var vh = window.innerHeight * 0.01;
+if (vh > Math.floor(window.innerHeight) / 100) {
+    vh = vh - 0.01;
+}
+document.documentElement.style.setProperty('--vh', `${vh}px`);
+
+window.addEventListener('resize', () => {
+    vh = window.innerHeight * 0.01;
+    if (vh > Math.floor(window.innerHeight) / 100) {
+        vh = vh - 0.01;
+    }
+    document.documentElement.style.setProperty('--vh', `${vh}px`);
+});
