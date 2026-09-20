@@ -7,7 +7,7 @@ cardTemplate.innerHTML = `
             <div class="card-title show-content">
                 <h1><slot name="title">title</slot></h1>
             </div>
-            <div class="trans-wrap show-content">
+            <div class="trans-wrap show-content" part="wrap">
                 <div class="card-body show-content">
                     <slot name="body">BODY</slot>
                     <slot name="footer"></slot>
@@ -39,6 +39,9 @@ customElements.define('card-component', Card);
 var transitionout = false;
 var destination = null;
 const cardwatcher = document.querySelector('card-component').shadowRoot.querySelector(".trans-wrap");
+
+// for the STUPID width transition stuff agugghghghgghhg
+document.documentElement.style.setProperty('--scrollbar-width', (window.innerWidth - document.querySelector('main').clientWidth) + "px");
 
 cardwatcher.addEventListener("transitionend", (e) => {
     if (transitionout && e.propertyName == "grid-template-rows") {

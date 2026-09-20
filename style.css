@@ -1,5 +1,5 @@
 :root, :host {
-    --trans-dur: 0.13s;
+    --trans-dur: 0.15s;
 
     --col-light: #FDFBFB;
     --col-midlight: #DDDEEB;
@@ -13,14 +13,16 @@
     --size-small: 300px;
     --size-med: 480px;
     --size-large: 640px;
+
+    /* for the dynamic sizing on the margins < 540px (magic numbers lmao) */
+    --page-padding: min(4.4444vw, 24px);
+    --inner-padding: min(5.9259vw, 32px);
 }
 
 body {
     margin: 0;
     font-family: 'Roboto Condensed', sans-serif;
-    /* background-image: url(/assets/header_splash.svg), url(/assets/bg_pattern.svg); */
     background-image: url(/assets/bg_pattern.svg);
-    /* background-repeat: no-repeat, repeat; */
     background-position: center top;
     max-height: 100vh;
     overflow-y: hidden;
@@ -70,10 +72,6 @@ h2 {
     width: 100%;
     font-family: 'Zen Loop', sans-serif;
     font-size: 32px;
-    /* background-image: linear-gradient(var(--col-dark), var(--col-mid));
-    color: transparent;
-    background-clip: text; */
-
     color: transparent;
     
     > span {
@@ -98,11 +96,6 @@ a {
     font-family: 'Zen Loop', sans-serif;
     font-size: 24px;
     font-weight: 400;
-
-    /* background-image: linear-gradient(var(--col-dark), var(--col-mid));
-    color: transparent;
-    background-clip: text; */
-
     color: transparent;
 
     > span {
@@ -113,9 +106,6 @@ a {
 
     @media(hover: hover) and (pointer: fine) {
         &:hover {
-            /* background-image: linear-gradient(var(--col-dark) 25%, var(--col-accent-50)); */
-            /* background-image: linear-gradient(var(--col-light), var(--col-light)); */
-
             > span {
                 background-image: linear-gradient(var(--col-dark) 25%, var(--col-accent-50));
                 color: transparent;
@@ -125,12 +115,6 @@ a {
     }
 
     &:active {
-        /* background-image:
-            linear-gradient(var(--col-dark) 25%, var(--col-accent-50)),
-            linear-gradient(#2b2d4200, var(--col-mid)); */
-
-        /* background-image: linear-gradient(var(--col-light), var(--col-light)); */
-
         > span {
             background-image: linear-gradient(var(--col-dark) 25%, var(--col-accent-50)), linear-gradient(#2b2d4200, var(--col-mid));
             color: transparent;
@@ -143,29 +127,19 @@ a {
 }
 
 main img {
-    /* background-color: var(--col-midlight); */
     box-sizing: border-box;
     max-width: 98%;
-
-    /* border: 2px solid transparent;
-    background:
-        linear-gradient(var(--col-light), var(--col-light)) padding-box,
-        linear-gradient(#f14f6333, #8d99ae33) border-box; */
     border-radius: 8px;
     max-height: 320px;
     object-fit: contain;
-
-    /* filter: drop-shadow(0px 1px 2px var(--col-mid)) drop-shadow(0px 0px 4px var(--col-midlight)); */
     filter: drop-shadow(0px 1px 1px var(--col-dark)) drop-shadow(0px 0px 2px var(--col-mid));
 }
 
 ul {
     margin: 0;
-    /* padding-left: 32px; */
     padding-inline-start: 20px;
     box-sizing: border-box;
     width: 100%;
-
     display: flex;
     flex-direction: column;
     gap: 4px;
@@ -199,7 +173,7 @@ main {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 24px;
+    padding: var(--page-padding);
     min-height: 100vh;
 }
 
@@ -209,18 +183,30 @@ card-component {
     min-width: min(100%, var(--size-small));
     width: 100%;
     display: grid;
-    transition: width var(--trans-dur) ease-out;
 
-    &.small::part(card) {
+    &.small {
         max-width: var(--size-small);
     }
 
-    &.medium::part(card) {
+    &.medium {
         max-width: var(--size-med);
     }
 
-    &.large::part(card) {
+    &.large {
         max-width: var(--size-large);
+    }
+
+    /* GET THE WIDTH ESTIMATED: subtract (padding on page, if smaller) + the padding on pagecard + the border on card-wrapper + the padding on card-wrapper + (the scrollbar width, if smaller) */
+    &.small::part(wrap) {
+        width: min(calc(100vw - ((2 * var(--page-padding)) + 32px + 2px + (2 * var(--inner-padding)) + var(--scrollbar-width))), calc(var(--size-small) - (32px + 2px + (2 * var(--inner-padding)))));
+    }
+
+    &.medium::part(wrap) {
+        width: min(calc(100vw - ((2 * var(--page-padding)) + 32px + 2px + (2 * var(--inner-padding)) + var(--scrollbar-width))), calc(var(--size-med) - (32px + 2px + (2 * var(--inner-padding)))));
+    }
+
+    &.large::part(wrap) {
+        width: min(calc(100vw - ((2 * var(--page-padding)) + 32px + 2px + (2 * var(--inner-padding)) + var(--scrollbar-width))), calc(var(--size-large) - (32px + 2px + (2 * var(--inner-padding)))));
     }
 }
 
@@ -253,7 +239,7 @@ card-component {
 
 .card-wrapper {
     border-radius: 12px;
-    padding: 32px;
+    padding: var(--inner-padding);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -297,7 +283,7 @@ card-component {
     display: grid;
     grid-template-rows: 0fr;
     transition: grid-template-rows var(--trans-dur) ease-out;
-    width: 100%;
+    /* width: 100%; */
 
     &.show-content {
         transition-delay: var(--trans-dur);
@@ -314,7 +300,7 @@ card-component {
     flex-direction: column;
     align-items: center;
     gap: 20px;
-    transition: height var(--trans-dur) ease-out, opacity var(--trans-dur) ease-out, width var(--trans-dur) ease-out;
+    /* transition: height var(--trans-dur) ease-out, opacity var(--trans-dur) ease-out, width var(--trans-dur) ease-out; */
     overflow: hidden;
     opacity: 0;
     /* width: 100%; */
@@ -327,20 +313,20 @@ card-component {
         padding-top: 12px;
     }
 
-    ::slotted(paragraph-component), ::slotted(bloglink-component), ::slotted(blogheader-component) {
+    ::slotted(paragraph-component), ::slotted(bloglink-component), ::slotted(blogheader-component), ::slotted(a), ::slotted(img), ::slotted(div) {
         transition: none;
         opacity: 0;
     }
 
     &.show-content {
-        transition-delay: var(--trans-dur);
+        /* transition-delay: var(--trans-dur); */
         opacity: 1;
 
         @starting-style {
             opacity: 0;
         }
 
-        ::slotted(paragraph-component), ::slotted(bloglink-component), ::slotted(blogheader-component) {
+        ::slotted(paragraph-component), ::slotted(bloglink-component), ::slotted(blogheader-component), ::slotted(a), ::slotted(img), ::slotted(div) {
             transition: opacity var(--trans-dur) ease-out;
             transition-delay: calc(var(--trans-dur) * 2);
             opacity: 1;
@@ -358,18 +344,14 @@ paragraph-component, bloglink-component, blogheader-component {
 .para {
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: 10px;
     align-items: flex-start;
     justify-content: flex-start;
-
-    /* slot[name=para-title] {
-        font-weight: 400;
-    } */
 
     .para-body {
         display: flex;
         flex-direction: column;
-        gap: 12px;
+        gap: 10px;
         font-weight: 200;
         width: 100%;
     }
@@ -378,13 +360,13 @@ paragraph-component, bloglink-component, blogheader-component {
 .bloglink {
     display: flex;
     flex-direction: column;
-    gap: 12px;
-    width: auto;
+    gap: 8px;
+    width: 100%;
 
     .bloglink-head {
         display: flex;
         flex-direction: column;
-        gap: 8px;
+        gap: 4px;
 
         ::slotted(a) {
             font-size: 32px !important;
