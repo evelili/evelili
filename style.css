@@ -41,7 +41,10 @@ body {
 .splash {
     position: fixed;
     z-index: -1;
-    justify-self: center;
+    /* justify-self: center; */
+
+    left: 50%;
+    transform: translate(-50%);
 }
 
 .grad {
